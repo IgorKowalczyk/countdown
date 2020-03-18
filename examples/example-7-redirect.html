@@ -68,7 +68,7 @@
     var minutesElement = document.querySelector("#minutes");
     var secondsElement = document.querySelector("#seconds");
     var containerElement = document.querySelector(".container");
-    var endDate = (new Date().getFullYear() + 1) + "01/01";
+    var endDate = (new Date().getFullYear() - 1) + "/01/01";
 
     var myCountDown = new countdown(endDate, function (remaining, finished) {
 
