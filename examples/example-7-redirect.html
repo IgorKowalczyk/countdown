@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Example: Coming Soon</title>
+  <title>Example: Redirect</title>
   <style>
     * {
       box-sizing: border-box;
@@ -31,7 +31,6 @@
 
     h1 {
       font-weight: normal;
-      font-size: 10em;
     }
 
     li {
@@ -61,7 +60,7 @@
     </ul>
   </div>
 
-  <script src="/countdown.js/download/countdown.min.js"></script>
+  <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
   <script type="text/javascript">
 
     var daysElement = document.querySelector("#days");
@@ -69,7 +68,7 @@
     var minutesElement = document.querySelector("#minutes");
     var secondsElement = document.querySelector("#seconds");
     var containerElement = document.querySelector(".container");
-    var endDate = (new Date().getFullYear() - 1) + "/01/01";
+    var endDate = (new Date().getFullYear() + 1) + "01/01";
 
     var myCountDown = new countdown(endDate, function (remaining, finished) {
 
@@ -88,4 +87,4 @@
   </script>
 </body>
 
-</html> 
+</html>
