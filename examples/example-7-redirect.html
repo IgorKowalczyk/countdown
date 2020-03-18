@@ -11,8 +11,7 @@ margin: 0;
 padding: 0;
 }
 
-html,
-body {
+html, body {
 height: 100%;
 }
 
@@ -51,7 +50,7 @@ font-size: 4.5rem;
 <body>
 
 <div class="container">
-<h1>Coming Soon</h1>
+<h1>Coming Soon!</h1>
 <ul>
 <li><span id="days">0</span>days</li>
 <li><span id="hours">0</span>Hours</li>
@@ -60,14 +59,15 @@ font-size: 4.5rem;
 </ul>
 </div>
 
+<!-- Script must be loaded first -->
+<script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
-
-var daysElement = document.querySelector("#days");
-var hoursElement = document.querySelector("#hours");
-var minutesElement = document.querySelector("#minutes");
-var secondsElement = document.querySelector("#seconds");
-var containerElement = document.querySelector(".container");
-var endDate = (new Date().getFullYear() - 1) + "/01/01";
+var daysElement = document.querySelector("#days"); // Get days element
+var hoursElement = document.querySelector("#hours"); // Get hours element
+var minutesElement = document.querySelector("#minutes"); // Get minutes element
+var secondsElement = document.querySelector("#seconds");  // Get seconds element
+var containerElement = document.querySelector(".container"); // Get container
+var endDate = (new Date().getFullYear() - 1) + "/01/01"; // Set Date
 
 var myCountDown = new countdown(endDate, function (remaining, finished) {
 
@@ -76,15 +76,12 @@ window.location.href = "http://igorkowalczyk/countdown.js";  // But it never exp
 return;
 }
 
-daysElement.textContent = remaining.totalDays;
-hoursElement.textContent = remaining.hours;
-minutesElement.textContent = remaining.minutes;
-secondsElement.textContent = remaining.seconds;
-
+daysElement.textContent = remaining.totalDays; // Setup date
+hoursElement.textContent = remaining.hours; // Setup date
+minutesElement.textContent = remaining.minutes; // Setup date
+secondsElement.textContent = remaining.seconds; // Setup date
 });
-
 </script>
-<script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 </body>
 
 </html>
