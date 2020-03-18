@@ -53,7 +53,6 @@
   <div class="container">
     <h1>Coming Soon</h1>
     <ul>
-	  <li><span id="year">0</span>year</li>
       <li><span id="days">0</span>days</li>
       <li><span id="hours">0</span>Hours</li>
       <li><span id="minutes">0</span>Minutes</li>
@@ -63,7 +62,6 @@
 
   <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
   <script type="text/javascript">
-    var yearElement = document.querySelector("#years"); // Get year element
     var daysElement = document.querySelector("#days"); // Get days element
     var hoursElement = document.querySelector("#hours"); // Get hours element
     var minutesElement = document.querySelector("#minutes"); // Get minutes element
@@ -77,7 +75,6 @@
         window.location.href = "https://igorkowalczyk.github.io/countdown.js";  // But it never expire :D
         return;
       }
-      yearElement.textContent = remaining.years;
       daysElement.textContent = remaining.totalDays;
       hoursElement.textContent = remaining.hours;
       minutesElement.textContent = remaining.minutes;
