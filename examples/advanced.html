@@ -10,10 +10,27 @@
 <link rel="canonical" href="/countdown.js/examples/advanced">
 </head>
 <body ondragstart="return false" ondrag="return false">
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+background-color: #ffd54f;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+</style>
 <p id="counter"></p>
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
-
 var counterElement = document.querySelector("#counter"); // Select #counter
 var endDate = (new Date().getFullYear() + 10) + "/01/01"; // Select date (Default javascript date format)
 
@@ -42,7 +59,6 @@ message += remaining.seconds + " seconds ";
 }
 
 counterElement.textContent = message; // Render message
-
 });
 </script>
 </body>
