@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example: Advanced</title>
+<meta name="viewport" content="width=device-width initial-scale=1">
+<meta name="theme-color" content="#fff">
+<meta name="description" content="Countdown.js - Advanced counter example.">
+<link rel="shortcut icon" href="https://igorkowalczyk.github.io/lib/favicon/favicon.jpg">
+<link rel="canonical" href="/countdown.js/examples/advanced">
+</head>
+<body ondragstart="return false" ondrag="return false">
+<p id="counter"></p>
+<script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
+<script type="text/javascript">
+
+var counterElement = document.querySelector("#counter"); // Select #counter
+var endDate = (new Date().getFullYear() + 10) + "/01/01"; // Select date (Default javascript date format)
+
+var myCountDown = new countdown(endDate, function (remaining, finished) { // Setup countdown
+
+var message = ""; // Default message
+
+if (finished) {
+message = "Expired"; // Show text when expired
+} else {
+message += remaining.totalSeconds + " totalSeconds "; // Else
+message += remaining.totalMinutes + " totalMinutes ";
+message += remaining.totalHours + " totalHours ";
+message += remaining.totalDays + " totalDays ";
+message += remaining.years + " years ";
+message += remaining.monthsToYear + " monthsToYear ";
+message += remaining.months + " months ";
+message += remaining.weeksToMonth + " weeksToMonth ";
+message += remaining.weeks + " weeks ";
+message += remaining.daysToMonth + " daysToMonth ";
+message += remaining.daysToWeek + " daysToWeek ";
+message += remaining.days + " days ";
+message += remaining.hours + " hours ";
+message += remaining.minutes + " minutes ";
+message += remaining.seconds + " seconds ";
+}
+
+counterElement.textContent = message; // Render message
+
+});
+</script>
+</body>
+</html>

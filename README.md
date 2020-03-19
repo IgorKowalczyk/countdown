@@ -1,13 +1,13 @@
 # countdown.js
 A simple and easy-to-use countdown.
 
-## [Download](https://github.com/igorkowalczyk/countdown/archive/master.zip) / [Demo](https://igorkowalczyk.github.io/countdown.js/examples/example-4-coming-soon.html)
+## [Docs](https://igorkowalczyk.github.io/countdown.js/) [Download](https://github.com/igorkowalczyk/countdown.js/archive/master.zip) / [Demo](https://igorkowalczyk.github.io/countdown.js/examples/soon)
 
 ## How to use
 
 Compiled and production-ready code can be found in the `download` directory.
 
-### 1. Include countdown.js on your site
+### 1. Include `countdown.js` on your site
 
 ```html
 <script src="path/to/countdown.min.js"></script>
@@ -124,6 +124,6 @@ The first parameter contains the following calculations related to the countdown
 The second parameter indicates whether the countdown is over.
 
 # License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/countdown.js/license.txt) file for details
 
-Created by [Yusuf SEZER](http://www.yusufsezer.com)
+Created by [Igor Kowalczyk](https://igorkowalczyk.github.io)
