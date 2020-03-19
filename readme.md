@@ -90,10 +90,10 @@ myCountDown.init(myDate, myFunction);
 ```
 
 #### destroy()
-Destroy the current `ysCountDown.init()`. This is called automatically during the `init` function to remove any existing initializations.
+Destroy the current `countdown.init()`. This is called automatically during the `init` function to remove any existing initializations.
 
 ```javascript
-var myCountDown = new ysCountDown(endDate, function (remaining, finished) { });
+var myCountDown = new countdown(endDate, function (remaining, finished) { });
 
 myCountDown.destroy();
 ```
