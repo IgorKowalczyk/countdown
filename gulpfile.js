@@ -9,7 +9,7 @@ const package = require('./package.json');
 
 var paths = {
   input: 'src/*',
-  output: 'dist/'
+  output: 'download/'
 };
 
 var banner = {
