@@ -14,7 +14,8 @@
   },
   "keywords": [
     "countdown",
-    "counter"
+    "counter",
+    "time"
   ],
   "devDependencies": {
     "del": "^3.0.0",
