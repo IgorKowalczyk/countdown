@@ -7,6 +7,7 @@ src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light
 
 html {
 box-sizing: border-box;
+scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
