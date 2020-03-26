@@ -13,6 +13,7 @@ scroll-behavior: smooth;
 *, *:before, *:after {
 box-sizing: inherit;
 transition: 500ms all;
+outline: none;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -21,8 +22,7 @@ padding: 0;
 font-weight: normal;
 }
 
-ol,
-ul {
+ol, ul {
 list-style: none;
 }
 
@@ -31,8 +31,9 @@ max-width: 100%;
 height: auto;
 }
 
+
 body {
-font-family: "Montserrat", sans-serif;
+font-family: "Montserrat";
 font-weight: 400;
 font-size: 16px;
 color: #333;
@@ -45,31 +46,100 @@ overflow: hidden;
 padding-right: 17px;
 }
 
+button {
+font-family: "Montserrat";
+display: flex;
+border: none;
+background: #ffc200;
+font-size: 1.30rem;
+color: #fff;
+padding: 10px 20px 10px 20px;
+margin: 10px;
+border-radius: 5px;
+box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+cursor: pointer;
+}
+
+button:hover {
+transform: scale(1.1);
+box-shadow: 0 3px 30px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+}
+
+.line {
+position: relative;
+}
+
+.line::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+width: 40%;
+margin: auto;
+height: 1px;
+background: linear-gradient(to right, rgba(189, 189, 189, 0), #bdbdbd, rgba(189, 189, 189, 0));
+}
+
 h1, h2, h3 {
-font-weight: 700;
 margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-weight: 700;
+}
+
+h1 {
+font-size: 2.14rem;
+}
+
+h2 {
+font-size: 1.76rem;
+}
+
+h3 {
+font-size: 1.5rem;
+}
+
+h4 {
+font-size: 1.30rem;
+}
+
+h5 {
+font-size: 1.20rem;
+}
+
+h6 {
+font-size: 1rem;
 }
 
 p {
 margin-bottom: 1.5rem;
 }
 
+.small {
+font-size: 16px;
+}
+	
 p:last-child {
 margin-bottom: 0;
 }
 
 pre {
-overflow-x: auto;
 background: #eee;
 padding: 0 0.5rem;
 margin-bottom: 1.5rem;
 max-width: 100%;
+word-break: break-word;
 border-left: 5px solid #ffc200;
+border-radius: 4px;
+font-weight: 400;
 }
 
 code {
 background: #eee;
 padding: 0.1rem 0.5rem;
+border-radius: 4px;
 }
 
 table {
@@ -213,7 +283,7 @@ bottom: 0;
 left: 0;
 right: 0;
 height: 1px;
-background: linear-gradient(to right, rgba(255, 194, 0, 0.3), #ffc200, rgba(255, 194, 0, 0.3));
+background: linear-gradient(to right, rgba(255, 194, 0, 0), #ffc200, rgba(255, 194, 0, 0));
 }
 
 footer section::after {
