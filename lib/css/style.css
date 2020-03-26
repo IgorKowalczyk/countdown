@@ -8,6 +8,7 @@ src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light
 html {
 box-sizing: border-box;
 scroll-behavior: smooth;
+overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -125,21 +126,36 @@ p:last-child {
 margin-bottom: 0;
 }
 
-pre {
-background: #eee;
-padding: 0 0.5rem;
-margin-bottom: 1.5rem;
+code, pre {
+letter-spacing: 0;
+-webkit-user-select: text;
+-moz-user-select: text;
+-ms-user-select: text;
+user-select: text;
 max-width: 100%;
-word-break: break-word;
-border-left: 5px solid #ffc200;
-border-radius: 4px;
-font-weight: 400;
+display: inline-table;
 }
 
 code {
-background: #eee;
-padding: 0.1rem 0.5rem;
-border-radius: 4px;
+background-color: #eee;
+border-radius: 5px;
+padding: 5px 10px;
+margin: 5px;
+font-family: Montserrat;
+}
+
+pre {
+display: block;
+margin: 0 0 1rem;
+line-height: 1.4;
+white-space: pre;
+white-space: pre-wrap;
+}
+
+pre code {
+padding: 10px;
+background-color: #eee;
+border: 0;
 }
 
 table {
