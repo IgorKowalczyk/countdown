@@ -114,6 +114,10 @@ h6 {
 font-size: 1rem;
 }
 
+.center {
+text-align: center;
+}
+
 p {
 margin-bottom: 1.5rem;
 }
@@ -237,10 +241,6 @@ padding: 8px;
 transition: all 500ms ease-in-out;
 }
 
-#menu svg {
-height: 2rem;
-width: 2rem;
-}
 #menu.open {
 left: 244px;
 color: #000;
@@ -262,6 +262,10 @@ color: #fff;
 background: #ffc200;
 overflow: auto;
 transition: left 500ms ease-in-out;
+}
+
+#navbar h1 {
+text-align: center;
 }
 
 #navbar.open {
