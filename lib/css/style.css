@@ -1,5 +1,41 @@
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
+:root {
+--white: #fff;
+--color-888: #888;
+--switch-slider: #888;
+--text: #333;
+--primary: #ffc200;
+--primary-rgb: 255, 194, 0;
+--navbar: #ffc200;
+--text-button: #fff;
+--eee: #eee;
+--overlay: 255, 255, 255;
+--fill: #fff;
+--fill-menu: #000;
+--hover: #fff;
+--navbar-hover: #fff;
+--navbar-selected: #000;
+}
+
+[data-theme="dark"] {
+--white: #222;
+--color-888: #000;
+--switch-slider: #fff;
+--text: #fff;
+--primary: #fff;
+--navbar: #222;
+--primary-rgb: 255, 255, 255;
+--text-button: #000;
+--eee: #3b3b3b;
+--overlay: 66, 66, 66;
+--fill: #000;
+--fill-menu: #fff;
+--hover: #3b3b3b;
+--navbar-hover: #fff;
+--navbar-selected: #fff;
+}
+
 @font-face {
 font-family: 'Montserrat';
 src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light.ttf);
@@ -13,7 +49,6 @@ overflow-x: hidden;
 
 *, *:before, *:after {
 box-sizing: inherit;
-transition: 500ms all;
 outline: none;
 }
 
@@ -25,6 +60,7 @@ font-weight: normal;
 
 ol, ul {
 list-style: none;
+transition: 500ms all;
 }
 
 img {
@@ -32,33 +68,36 @@ max-width: 100%;
 height: auto;
 }
 
-
 body {
 font-family: "Montserrat";
+background: var(--white);
 font-weight: 400;
 font-size: 16px;
-color: #333;
+color: var(--text);
 line-height: 1.5;
 margin: 2rem 1rem 0;
+transition: 500ms background;
 }
 
 body.no-scroll {
 overflow: hidden;
 padding-right: 17px;
+transition: 500ms all;
 }
 
 button {
 font-family: "Montserrat";
 display: flex;
 border: none;
-background: #ffc200;
+background: var(--primary);
 font-size: 1.30rem;
-color: #fff;
+color: var(--text-button);
 padding: 10px 20px 10px 20px;
 margin: 10px;
 border-radius: 5px;
 box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
 cursor: pointer;
+transition: 500ms all;
 }
 
 button:hover {
@@ -68,7 +107,7 @@ box-shadow: 0 3px 30px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
 
 .svg {
 margin: auto;
-fill: #fff;
+fill: var(--fill);
 }
 
 .line {
@@ -84,7 +123,8 @@ right: 0;
 width: 40%;
 margin: auto;
 height: 1px;
-background: linear-gradient(to right, rgba(189, 189, 189, 0), #bdbdbd, rgba(189, 189, 189, 0));
+background: linear-gradient(to right, rgba(var(--primary-rgb), 0), #bdbdbd, rgba(var(--primary-rgb), 0));
+transition: 500ms all;
 }
 
 h1, h2, h3 {
@@ -93,6 +133,7 @@ margin-bottom: 1.5rem;
 
 h1, h2, h3, h4, h5, h6 {
 font-weight: 700;
+transition: 500ms all;
 }
 
 h1 {
@@ -125,6 +166,7 @@ text-align: center;
 
 p {
 margin-bottom: 1.5rem;
+transition: 500ms all;
 }
 
 .small {
@@ -143,14 +185,16 @@ letter-spacing: 0;
 user-select: text;
 max-width: 100%;
 display: inline-table;
+transition: 500ms all;
 }
 
 code {
-background-color: #eee;
+background-color: var(--eee);
 border-radius: 5px;
 padding: 5px 10px;
 margin: 5px;
 font-family: Montserrat;
+transition: 500ms all;
 }
 
 pre {
@@ -163,8 +207,8 @@ white-space: pre-wrap;
 
 pre code {
 padding: 10px;
-background-color: #eee;
-border-left: 3px solid #ffc200;
+background-color: var(--eee);
+border-left: 3px solid var(--primary);
 border-radius: 0px 4px 4px 0px;
 }
 
@@ -174,6 +218,7 @@ max-width: 100%;
 border-collapse: collapse;
 margin-bottom: 1.5rem;
 word-break: break-word;
+transition: 500ms all;
 }
 
 th, td {
@@ -194,8 +239,9 @@ word-break: break-word;
 
 a, a:hover, a:active, a:focus {
 text-decoration: none;
-color: #ffc200;
+color: var(--primary);
 display: contents;
+transition: 500ms all;
 }
 
 a:hover {
@@ -218,7 +264,7 @@ margin: 1rem 0;
 
 #overlay {
 pointer-events: none;
-background: rgba(255, 255, 255, 0.9);
+background: rgba(var(--overlay), 0.9);
 position: fixed;
 top: 0;
 left: 0;
@@ -235,10 +281,9 @@ opacity: 1;
 }
 
 #menu {
-color: #000;
+color: var(--text);
 width: 100%;
-background: #fff;
-box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+background: var(--white);
 z-index: 999;
 cursor: pointer;
 position: fixed;
@@ -248,10 +293,19 @@ padding: 8px;
 transition: all 500ms ease-in-out;
 }
 
+.scrolled, #menu:hover {
+box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+}
+
+#menu svg {
+fill: var(--fill-menu);
+transition: 500ms all;
+}
+
 #menu.open {
 left: 244px;
 color: #000;
-background: #fff;
+background: var(--white);
 border-bottom-left-radius: 5px;
 box-shadow: none;
 }
@@ -266,7 +320,7 @@ bottom: 0;
 left: -310px;
 width: 300px;
 color: #fff;
-background: #ffc200;
+background: var(--navbar);
 overflow: auto;
 transition: left 500ms ease-in-out;
 }
@@ -291,16 +345,22 @@ padding: 1.5rem;
 
 .header {
 width: 100%;
-background: #fff;
+background: var(--white);
 z-index: 9999;
 position: fixed;
 }
 
-#navbar a:hover, #navbar a.selected {
+#navbar a:hover {
 opacity: 1;
 transition: 500ms all;
-background: #fff;
-color: #000;
+background: var(--hover);
+color: var(--navbar-hover);
+}
+
+#navbar a.selected {
+background: var(--hover);
+color: var(--navbar-selected);
+transition: 500ms all;
 }
 
 main section::after {
@@ -310,7 +370,8 @@ bottom: 0;
 left: 0;
 right: 0;
 height: 1px;
-background: linear-gradient(to right, rgba(255, 194, 0, 0), #ffc200, rgba(255, 194, 0, 0));
+background: linear-gradient(to right, rgba(var(--primary-rgb), 0), var(--primary), rgba(var(--primary-rgb), 0));
+transition: 500ms all;
 }
 
 footer section::after {
@@ -361,4 +422,86 @@ font-size: 24px;
 max-width: 1280px;
 margin: 2rem auto 0;
 }
+}
+
+.theme-switch, .switch {
+display: inline-block;
+height: 34px;
+position: relative;
+width: 60px;
+}
+
+.theme-switch input, .switch input {
+display: none;
+}
+
+.theme-switch-container, .switch-container {
+position: sticky;
+top: 0;
+}
+
+.slider, .slider-switch {
+background-color: rgba(31, 31, 31, 0.8);
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;
+}
+
+.slider-switch:before {
+background-color: var(--switch-slider);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+.slider:before {
+background-color: var(--color-888);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+input:checked + .slider, input:checked + .slider-switch {
+background-color: #888;
+}
+
+input:checked + .slider:before, input:checked + .slider-switch:before {
+transform: translateX(26px);
+background-color: #fff;
+}
+
+.slider.round, .slider-switch.round {
+border-radius: 34px;
+}
+
+.slider.round:before, .slider-switch.round:before {
+border-radius: 50%;
+}
+
+.li-switch {
+list-style: none;
+}
+
+.theme-switch-container {
+display: flex;
+align-items: center;
+justify-content: center;
+transition: 500ms all;
+}
+
+.option-description {
+text-align: center;
+transition: 500ms all;
 }
