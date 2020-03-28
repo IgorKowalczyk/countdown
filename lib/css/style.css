@@ -21,6 +21,13 @@
 --navbar-selected: #fff;
 --navbar-color: #000;
 --code: #00a3a3;
+--preloader: #fff;
+--spinner: #00a3a3;
+--spinner-border: #f3f3f3;
+--scrollbar-thumb: #888;
+--scrollbar: #fff;
+--scrollbar-hover: #4a4a4a;
+--scrollbar-active: #383838;
 }
 
 [data-theme="dark"] {
@@ -44,11 +51,40 @@
 --navbar-selected: #fff;
 --navbar-color: #fff;
 --code: #fff;
+--scrollbar-thumb: #2b2b2b;
+--scrollbar-hover: #363636;
+--scrollbar-active: #454545;
+--preloader: #222;
+--spinner: #888;
+--spinner-border: #333;
 }
 
 @font-face {
 font-family: 'Montserrat';
 src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light.ttf);
+}
+
+.no-js {
+background: #f44336;
+font-family: 'Montserrat';
+color: #fff;
+text-align: center;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-ms-flex-align: center;
+-webkit-box-align: center;
+align-items: center;
+justify-content: center;
+position: fixed;
+user-select: none;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 999999;
 }
 
 html {
@@ -60,6 +96,8 @@ overflow-x: hidden;
 *, *:before, *:after {
 box-sizing: inherit;
 outline: none;
+scrollbar-color: #353535 transparent;
+scrollbar-width: thin;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -432,6 +470,77 @@ body {
 font-size: 24px;
 max-width: 1280px;
 margin: 2rem auto 0;
+}
+}
+
+::-webkit-scrollbar {
+width: 6px;
+background-color: var(--scrollbar);
+cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: var(--scrollbar-thumb);
+height: 6px;
+background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: var(--scrollbar-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+background-color: var(--scrollbar-active);
+}
+
+.preloader {
+height: 100%;
+width: 100%;
+background: var(--preloader);
+position: fixed;
+left: 0;
+top: 0;
+z-index: 10000;
+perspective: 1600px;
+perspective-origin: 20% 50%;
+transition: 0.5s all;
+opacity: 1;
+}
+
+.spinner {
+width: 80px;
+height: 80px;
+border: 2px solid var(--spinner-border);
+border-top: 3px solid var(--spinner);
+border-radius: 100%;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+animation: spin 1s infinite linear;
+}
+
+.preloader.fade {
+opacity: 0;
+}
+
+@keyframes spin {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+
+@keyframes ico {
+from {
+transform: rotateY(0deg);
+}
+to {
+transform: rotateY(360deg);
 }
 }
 

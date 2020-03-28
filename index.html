@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="/countdown.js/lib/css/style.min.css">
 </head>
 <body ondragstart="return false" ondrag="return false">
+<script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
+<noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
 <header>
 <div id="overlay"></div>
 <div class="header">
@@ -60,7 +62,7 @@
 <p class="small">This version is a developer version. It may contain bugs and is constantly being improved. Using it in production is not recommended.</p>
 <button>Download</button>
 <br>
-<h2 class="line">Start Using</h2>
+<h2 class="line">Include scripts</h2>
 <p>It is possible to place one of two versions in the script - minified and unminified JS files.</p>
 <pre><code class="javascript">&lt;script type="text/javascript" src="js/countdown.min.js">&lt;/script>
 </code></pre>
