@@ -6,6 +6,8 @@
 --switch-slider: #888;
 --text: #333;
 --primary: #fff;
+--line: #00a3a3;
+--line-rgb: 0, 163, 163;
 --button: #00a3a3;
 --primary-rgb: 255, 194, 0;
 --navbar: #fff;
@@ -26,6 +28,8 @@
 --switch-slider: #fff;
 --text: #fff;
 --primary: #fff;
+--line: #fff;
+--line-rgb: 255, 255, 255;
 --button: #fff;
 --navbar: #222;
 --primary-rgb: 255, 255, 255;
@@ -375,7 +379,7 @@ bottom: 0;
 left: 0;
 right: 0;
 height: 1px;
-background: linear-gradient(to right, rgba(var(--primary-rgb), 0), var(--primary), rgba(var(--primary-rgb), 0));
+background: linear-gradient(to right, rgba(var(--line-rgb), 0), var(--line), rgba(var(--line-rgb), 0));
 transition: 500ms all;
 }
 
