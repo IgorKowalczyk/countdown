@@ -15,7 +15,7 @@
 --fill: #fff;
 --fill-menu: #000;
 --hover: #00a3a3;
---navbar-hover: #000;
+--navbar-hover: #fff;
 --navbar-selected: #000;
 --navbar-color: #000;
 }
@@ -323,7 +323,7 @@ top: 0;
 bottom: 0;
 left: -310px;
 width: 300px;
-color: #fff;
+color: var(--navbar-color);
 background: var(--navbar);
 overflow: auto;
 transition: 500ms ease-in-out;
