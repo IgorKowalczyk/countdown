@@ -20,6 +20,7 @@
 --navbar-hover: #fff;
 --navbar-selected: #fff;
 --navbar-color: #000;
+--code: #00a3a3;
 }
 
 [data-theme="dark"] {
@@ -42,6 +43,7 @@
 --navbar-hover: #fff;
 --navbar-selected: #fff;
 --navbar-color: #fff;
+--code: #fff;
 }
 
 @font-face {
@@ -216,7 +218,7 @@ white-space: pre-wrap;
 pre code {
 padding: 10px;
 background-color: var(--eee);
-border-left: 3px solid var(--primary);
+border-left: 3px solid var(--code);
 border-radius: 0px 4px 4px 0px;
 }
 
