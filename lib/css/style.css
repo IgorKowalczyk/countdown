@@ -16,7 +16,7 @@
 --fill-menu: #000;
 --hover: #00a3a3;
 --navbar-hover: #fff;
---navbar-selected: #000;
+--navbar-selected: #fff;
 --navbar-color: #000;
 }
 
@@ -344,7 +344,7 @@ padding: 0;
 
 #navbar a {
 display: block;
-color: #fff;
+color: var(--navbar-color);
 padding: 1.5rem;
 }
 
