@@ -6,6 +6,7 @@
 --switch-slider: #888;
 --text: #333;
 --primary: #fff;
+--button: #00a3a3;
 --primary-rgb: 255, 194, 0;
 --navbar: #fff;
 --text-button: #fff;
@@ -14,8 +15,9 @@
 --fill: #fff;
 --fill-menu: #000;
 --hover: #00a3a3;
---navbar-hover: #fff;
+--navbar-hover: #000;
 --navbar-selected: #000;
+--navbar-color: #000;
 }
 
 [data-theme="dark"] {
@@ -24,6 +26,7 @@
 --switch-slider: #fff;
 --text: #fff;
 --primary: #fff;
+--button: #fff;
 --navbar: #222;
 --primary-rgb: 255, 255, 255;
 --text-button: #000;
@@ -34,6 +37,7 @@
 --hover: #3b3b3b;
 --navbar-hover: #fff;
 --navbar-selected: #fff;
+--navbar-color: #fff;
 }
 
 @font-face {
@@ -89,7 +93,7 @@ button {
 font-family: "Montserrat";
 display: flex;
 border: none;
-background: var(--primary);
+background: var(--button);
 font-size: 1.30rem;
 color: var(--text-button);
 padding: 10px 20px 10px 20px;
