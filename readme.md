@@ -76,7 +76,7 @@ var myCountDown = new countdown(new Date("2050-01-01T12:05:55Z"), function (rema
 ```
 
 
-### Use ysCountDown events in your own scripts
+### Use countdown.js events in your own scripts
 
 You can also call countdown.js events in your own scripts.
 
@@ -122,6 +122,8 @@ The first parameter contains the following calculations related to the countdown
 | totalSeconds |
 
 The second parameter indicates whether the countdown is over.
+
+# More docs in [official docs] (https://https://igorkowalczyk.github.io/countdown.js)
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/countdown.js/license.txt) file for details
