@@ -261,6 +261,31 @@ border-left: 3px solid var(--code);
 border-radius: 0px 4px 4px 0px;
 }
 
+.reserved {
+color: #e06c75;
+}
+
+.operators {
+color: #e06c75;
+}
+
+.strings {
+color: #98c379;
+}
+
+.numbers {
+color: #d19a66;
+}
+
+.comments {
+color: #5c6370;
+font-style: italic;
+}
+
+.attribute {
+color: #e6c07b;
+}
+
 table {
 display: block;
 max-width: 100%;
