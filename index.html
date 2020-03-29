@@ -30,10 +30,10 @@
 </section>
 </header>
 <section>
-<a class="nav-link" href="#Test-2">Test 2</a>
+<a class="nav-link" href="#Callback-parametrs">Callback Parametrs</a>
 </section>
 <section>
-<a class="nav-link" href="#Test-3">Test 3</a>
+<a class="nav-link" href="#Examples">Examples</a>
 </section>
 </nav>
 </header>
@@ -64,57 +64,181 @@
 <br>
 <h2 class="line">Include scripts</h2>
 <p>It is possible to place one of two versions in the script - minified and unminified JS files.</p>
-<pre><code class="javascript"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.min.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
+<pre><code class="html"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.min.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
 </code></pre>
 <p>Or:</p>
-<pre><code class="javascript"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
+<pre><code class="html"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
 </code></pre>
 </section>
 
-<section id="Test-2" class="main-section">
+<section id="Callback-parameters" class="main-section">
 <header>
-<h2>Test 2</h2>
+<h1>Callback parameters</h1>
+<p>The callback function has two parameters.</p>
 </header>
-<p>Test string. <code>Test Code</code>
-<p>Test string 2. <code>Test Code 2</code>
-<pre><code class="javascript">test code block</code></pre>
-</section>
-
-<section id="Test-3" class="main-section">
-<header>
-<h2>Test 3</h2>
-</header>
+<p class="small">The first parameter contains the following calculations related to the countdown.</p>
 <table>
-<caption>Test table</caption>
+<caption>Callback parameters</caption>
 <thead>
 <tr>
-<th scope="col">Flag</th>
+<th scope="col">Parametrs</th>
 <th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>1</code></td>
-<td>Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</td>
+<td>
+<code>
+seconds
+</code>
+</td>
+<td>Seconds to end date.</td>
 </tr>
 <tr>
-<td><code>2</code></td>
-<td>Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</td>
+<td>
+<code>
+minutes
+</code>
+</td>
+<td>Minutes to end date.</td>
 </tr>
 <tr>
-<td><code>3</code></td>
-<td>Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</td>
+<td>
+<code>
+hours
+</code>
+</td>
+<td>Hours to end date.</td>
 </tr>
 <tr>
-<td><code>4</code></td>
-<td>Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</td>
+<td>
+<code>
+days
+</code>
+</td>
+<td>Days to end date.</td>
 </tr>
 <tr>
-<td><code>5</code></td>
-<td>Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</td>
+<td>
+<code>
+daysToWeek
+</code>
+</td>
+<td>Days to selected week.</td>
+</tr>
+<tr>
+<td>
+<code>
+daysToMonth
+</code>
+</td>
+<td>Days to selected month.</td>
+</tr>
+<tr>
+<td>
+<code>
+weeks
+</code>
+</td>
+<td>Weeks to end date.</td>
+</tr>
+<tr>
+<td>
+<code>
+weeksToMonth
+</code>
+</td>
+<td>Weeks to selected month.</td>
+</tr>
+<tr>
+<td>
+<code>
+months
+</code>
+</td>
+<td>Months to selected date.</td>
+</tr>
+<tr>
+<td>
+<code>
+monthsToYear
+</code>
+</td>
+<td>Months to selected year.</td>
+</tr>
+<tr>
+<td>
+<code>
+months
+</code>
+</td>
+<td>Months to selected date.</td>
+</tr>
+<tr>
+<td>
+<code>
+years
+</code>
+</td>
+<td>Years to selected date.</td>
+</tr>
+<tr>
+<td>
+<code>
+todalDays
+</code>
+</td>
+<td>Total days to end date.</td>
+</tr>
+<tr>
+<td>
+<code>
+todalHours
+</code>
+</td>
+<td>Total hours to end date.</td>
+</tr>
+<tr>
+<td>
+<code>
+todalMinutes
+</code>
+</td>
+<td>Total minutes to end date.</td>
+</tr>
+<tr>
+<td>
+<code>
+todalSeconds
+</code>
+</td>
+<td>Total seconds to end date.</td>
 </tr>
 </tbody>
 </table>
+</section>
+
+<section id="Examples" class="main-section">
+<header>
+<h1>Examples</h1>
+<p>Code examples.</p>
+</header>
+<h2>1</h2>
+<pre><code class="javascript">var myCountDown = new countdown("2050/01/01", function (remaining, finished) {
+
+  if (finished) {
+    
+    document.body.innerHTML = "Expired";
+
+  } else {
+
+    document.body.innerHTML = remaining.hours + "h " + remaining.minutes + "m " + remaining.seconds + "s";
+
+  }
+
+});
+</code></pre>
+
 </section>
 
 <footer>
