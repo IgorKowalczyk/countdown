@@ -226,7 +226,7 @@ p:last-child {
 margin-bottom: 0;
 }
 
-code, pre {
+.code, pre {
 letter-spacing: 0;
 -webkit-user-select: text;
 -moz-user-select: text;
@@ -237,7 +237,7 @@ display: inline-table;
 transition: 500ms all;
 }
 
-code {
+.code {
 background-color: var(--eee);
 border-radius: 5px;
 padding: 5px 10px;
@@ -254,7 +254,7 @@ white-space: pre;
 white-space: pre-wrap;
 }
 
-pre code {
+pre .code {
 padding: 10px;
 background-color: var(--eee);
 border-left: 3px solid var(--code);
