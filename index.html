@@ -69,6 +69,9 @@
 <p>Or:</p>
 <pre><div class="code html"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
 </div></pre>
+<h2 class="line">Set end date</h2>
+<p>Choose a date that supports <code>JavaScript</code> in whatever format you like.</p>
+<pre><div class="code javascript"><span class="reserved">var</span> endDate <span class="operators">=</span> <span class="strings">"2050/01/01"</span>;</div></pre>
 </section>
 
 <section id="Callback-parameters" class="main-section">
@@ -223,22 +226,37 @@ todalSeconds
 <h1>Examples</h1>
 <p>Code examples.</p>
 </header>
-<h2>1</h2>
-<pre><code class="javascript">var myCountDown = new countdown("2050/01/01", function (remaining, finished) {
+<h2>Example 1.</h2>
+<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
 
-  if (finished) {
+  <span class="reserved">if</span> (finished) <span class="operators">{</span>
     
-    document.body.innerHTML = "Expired";
+    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
 
-  } else {
+  <span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
 
-    document.body.innerHTML = remaining.hours + "h " + remaining.minutes + "m " + remaining.seconds + "s";
+    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
 
-  }
+  <span class="operators">}</span>
 
-});
-</code></pre>
+<span class="operators">}</span>);
+</div></pre>
 
+<h2 class="line">Example 2.</h2>
+<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(<span class="reserved">new</span> Date(<span class="strings">"2050-01-01T12:05:55Z"</span>), <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
+
+  <span class="reserved">if</span> (finished) <span class="operators">{</span>
+    
+    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
+
+  <span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
+
+    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
+
+  <span class="operators">}</span>
+
+<span class="operators">}</span>);
+</div></pre>
 </section>
 
 <footer>
