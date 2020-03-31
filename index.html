@@ -64,10 +64,10 @@
 <br>
 <h2 class="line">Include scripts</h2>
 <p>It is possible to place one of two versions in the script - minified and unminified JS files.</p>
-<pre><div class="code html"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.min.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
+<pre><div class="code html"><span class="operators">&lt;script</span>&nbsp;<span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span>&nbsp;<span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.min.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
 </div></pre>
 <p>Or:</p>
-<pre><div class="code html"><span class="operators">&lt;script</span> <span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span> <span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
+<pre><div class="code html"><span class="operators">&lt;script</span>&nbsp;<span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span>&nbsp;<span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
 </div></pre>
 <h2 class="line">Set end date</h2>
 <p>Choose a date that supports <code class="code">JavaScript</code> in whatever format you like.</p>
@@ -227,13 +227,13 @@ todalSeconds
 <p>Code examples.</p>
 </header>
 <h2>Example 1.</h2>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
+<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
 
   <span class="reserved">if</span> (finished) <span class="operators">{</span>
     
     document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
 
-  <span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
+  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
 
     document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
 
@@ -243,13 +243,13 @@ todalSeconds
 </div></pre>
 
 <h2 class="line">Example 2.</h2>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(<span class="reserved">new</span> Date(<span class="strings">"2050-01-01T12:05:55Z"</span>), <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
+<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="reserved">new</span> Date(<span class="strings">"2050-01-01T12:05:55Z"</span>), <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
 
   <span class="reserved">if</span> (finished) <span class="operators">{</span>
     
     document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
 
-  <span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
+  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
 
     document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
 
