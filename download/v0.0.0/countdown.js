@@ -1,7 +1,7 @@
 /*!
 * countdown.js - A simple and easy-to-use countdown.
 * Author: Igor Kowalczyk
-* Version: v0.0.1
+* Version: v0.0.0
 * Url: https://igorkowalczyk/countdown.js
 * License: MIT
 */
