@@ -1,7 +1,7 @@
 # countdown.js
 A simple and easy-to-use countdown.
 
-## [Docs](https://igorkowalczyk.github.io/countdown.js/) / [Download](https://github.com/igorkowalczyk/countdown.js/archive/master.zip) / [Demo](https://igorkowalczyk.github.io/countdown.js/examples/soon)
+[Docs](https://igorkowalczyk.github.io/countdown.js/) / [Download](https://github.com/igorkowalczyk/countdown.js/archive/master.zip) / [Demo](https://igorkowalczyk.github.io/countdown.js/examples/soon)
 
 ## How to use
 
