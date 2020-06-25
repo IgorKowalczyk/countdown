@@ -11,6 +11,25 @@
 </head>
 <body ondragstart="return false" ondrag="return false">
 <style>
+:root {
+--background: #fff;
+--text: #333;
+--color-888: #888;
+--switch-slider: #888;
+}
+
+[data-theme="dark"] {
+--background: #222;
+--text: #fff;
+--color-888: #000;
+--switch-slider: #fff;
+}
+
+@font-face {
+font-family: 'Montserrat';
+src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light.ttf);
+}
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -22,13 +41,136 @@ height: 100%;
 }
 
 body {
-background-color: #ffd54f;
+background-color: var(--background);
+color: var(--text);
+font-family: 'Montserrat';
 display: flex;
 align-items: center;
 justify-content: center;
+transition: 500ms;
+position: relative;
+}
+
+.container {
+text-align: center;
+}
+
+h1 {
+font-weight: normal;
+}
+
+li {
+display: inline-block;
+font-size: 1.5em;
+list-style-type: none;
+padding: 1em;
+text-transform: uppercase;
+}
+
+li span {
+display: block;
+font-size: 4.5rem;
+}
+
+footer {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+text-align: center;
+}
+
+.theme-switch, .switch {
+display: inline-block;
+height: 34px;
+position: relative;
+width: 60px;
+}
+
+.theme-switch input, .switch input {
+display: none;
+}
+
+.theme-switch-container, .switch-container {
+position: sticky;
+top: 0;
+}
+
+.slider, .slider-switch {
+background-color: rgba(31, 31, 31, 0.8);
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;
+}
+
+.slider-switch:before {
+background-color: var(--switch-slider);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+.slider:before {
+background-color: var(--color-888);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+input:checked + .slider, input:checked + .slider-switch {
+background-color: #888;
+}
+
+input:checked + .slider:before, input:checked + .slider-switch:before {
+transform: translateX(26px);
+background-color: #fff;
+}
+
+.slider.round, .slider-switch.round {
+border-radius: 34px;
+}
+
+.slider.round:before, .slider-switch.round:before {
+border-radius: 50%;
+}
+
+.li-switch {
+list-style: none;
+}
+
+.theme-switch-container {
+display: flex;
+align-items: center;
+justify-content: center;
+transition: 500ms all;
+}
+
+.option-description {
+text-align: center;
+transition: 500ms all;
 }
 </style>
 <p id="counter"></p>
+<footer>
+<li class="li-switch"><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Light/Dark Mode</div></li>
+</footer>
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var counterElement = document.querySelector("#counter"); // Select #counter
@@ -60,6 +202,26 @@ message += remaining.seconds + " seconds ";
 
 counterElement.textContent = message; // Render message
 });
+
+const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
+const currenttheme = localStorage.getItem('theme');
+if (currenttheme) {
+document.documentElement.setAttribute('data-theme', currenttheme);
+if (currenttheme === 'dark') {
+toggletheme.checked = true;
+}
+}
+function switchtheme(e) {
+if (e.target.checked) {
+document.documentElement.setAttribute('data-theme', 'dark');
+localStorage.setItem('theme', 'dark');
+}
+else {
+document.documentElement.setAttribute('data-theme', 'light');
+localStorage.setItem('theme', 'light');
+}
+}
+toggletheme.addEventListener('change', switchtheme, false);
 </script>
 </body>
 </html>
