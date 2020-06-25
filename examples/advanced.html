@@ -187,21 +187,21 @@ var message = ""; // Default message
 if (finished) {
 message = "Expired"; // Show text when expired
 } else {
-message += remaining.totalSeconds + " Total Seconds "; // Else
-message += remaining.totalMinutes + " Total Minutes ";
-message += remaining.totalHours + " Total Hours ";
-message += remaining.totalDays + " Total Days ";
-message += remaining.years + " Years ";
-message += remaining.monthsToYear + " Months To Year ";
-message += remaining.months + " Months ";
-message += remaining.weeksToMonth + " Weeks To Month ";
-message += remaining.weeks + " Weeks ";
-message += remaining.daysToMonth + " Days To Month ";
-message += remaining.daysToWeek + " Days To Week ";
-message += remaining.days + " Days ";
-message += remaining.hours + " Hours ";
-message += remaining.minutes + " Minutes ";
-message += remaining.seconds + " Seconds ";
+message += remaining.totalSeconds + " Total Seconds<br>"; // Else
+message += remaining.totalMinutes + " Total Minutes<br>";
+message += remaining.totalHours + " Total Hours<br>";
+message += remaining.totalDays + " Total Days<br>";
+message += remaining.years + " Years<br>";
+message += remaining.monthsToYear + " Months To Year<br>";
+message += remaining.months + " Months<br>";
+message += remaining.weeksToMonth + " Weeks To Month<br>";
+message += remaining.weeks + " Weeks<br>";
+message += remaining.daysToMonth + " Days To Month<br>";
+message += remaining.daysToWeek + " Days To Week<br>";
+message += remaining.days + " Days<br>";
+message += remaining.hours + " Hours<br>";
+message += remaining.minutes + " Minutes<br>";
+message += remaining.seconds + " Seconds<br>";
 }
 
 counterElement.textContent = message; // Render message
