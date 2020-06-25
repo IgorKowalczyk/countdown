@@ -48,6 +48,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 transition: 500ms;
+position: relative;
 }
 
 .container {
@@ -69,6 +70,14 @@ text-transform: uppercase;
 li span {
 display: block;
 font-size: 4.5rem;
+}
+
+footer {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+text-align: center;
 }
 
 .theme-switch, .switch {
@@ -162,12 +171,14 @@ transition: 500ms all;
 <li><span id="seconds">0</span>Seconds</li>
 </ul>
 </div>
+<footer>
 <li class="li-switch"><div class="theme-switch-container">
 <label class="theme-switch" for="checkbox">
 <input type="checkbox" id="checkbox"/>
 <div class="slider round"></div>
 </label>
 </div><div class="option-description">Light/Dark Mode</div></li>
+</footer>
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var daysElement = document.querySelector("#days"); // Select #days
