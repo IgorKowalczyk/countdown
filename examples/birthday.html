@@ -13,10 +13,12 @@
 <style>
 :root {
 --background: #fff;
+--text: #333;
 }
 
 [data-theme="dark"] {
---white: #222;
+--background: #222;
+--text: #fff;
 }
 
 * {
@@ -25,8 +27,7 @@ margin: 0;
 padding: 0;
 }
 
-html,
-body {
+html, body {
 height: 100%;
 }
 
@@ -38,7 +39,7 @@ justify-content: center;
 }
 
 .container {
-color: #333;
+color: var(--text);
 text-align: center;
 }
 
