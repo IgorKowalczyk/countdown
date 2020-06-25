@@ -164,8 +164,16 @@ transition: 500ms all;
 </style>
 <div class="container">
 <h1>Advanced</h1>
-<ul class="counter">
+<ul>
+<li><span id="seconds-total">0</span>Total Seconds</li>
+<li><span id="minutes-total">0</span>Total Minutes</li>
+<li><span id="hours-total">0</span>Total Hours</li>
+<li><span id="days-total">0</span>Total Days</li>
+<li><span id="years">0</span>Years</li>
+<li><span id="months-to-year">0</span>Months To Year</li>
+<li><span id="months">0</span>Months</li>
 </ul>
+  <span  class="counter"></span>
 </div>
 <footer>
 <li class="li-switch"><div class="theme-switch-container">
@@ -178,6 +186,14 @@ transition: 500ms all;
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var counterElement = document.querySelector(".counter"); // Select #counter
+
+var secondsTotalElement = document.querySelector("#seconds-total"); // Select #seconds-total
+var minutesElement = document.querySelector("#minutes-total"); // Select #minutes-total
+var hoursTotalElement = document.querySelector("#hours-total"); // Select #hours-total
+var daysTotalElement = document.querySelector("#days-total"); // Select #days-total
+var yearsElement = document.querySelector("#years"); // Select #years
+var monthsToYearElement = document.querySelector("#months-to-year"); // Select #months-to-year
+var monthsElement = document.querySelector("#months"); // Select #months
 var endDate = (new Date().getFullYear() + 10) + "/01/01"; // Select date (Default javascript date format)
 
 var myCountDown = new countdown(endDate, function (remaining, finished) { // Setup countdown
@@ -185,15 +201,15 @@ var myCountDown = new countdown(endDate, function (remaining, finished) { // Set
 var message = ""; // Default message
 
 if (finished) {
-message = "Expired"; // Show text when expired
+counterElement.textContent = "Expired"; // Show text when expired
 } else {
-message += remaining.totalSeconds + " Total Seconds<br>"; // Else
-message += remaining.totalMinutes + " Total Minutes<br>";
-message += remaining.totalHours + " Total Hours<br>";
-message += remaining.totalDays + " Total Days<br>";
-message += remaining.years + " Years<br>";
-message += remaining.monthsToYear + " Months To Year<br>";
-message += remaining.months + " Months<br>";
+totalSecondsElement.textContent = remaining.totalSeconds;
+totalMinutesElement.textContent = remaining.totalMinutes;
+totalHoursElement.textContent = remaining.totalHours;
+totalDaysElement.textContent = remaining.totalDays;
+yearsElement.textContent = remaining.years;
+monthsToYear.textContent = remaining.monthsToYear;
+months.textContent = remaining.months;
 message += remaining.weeksToMonth + " Weeks To Month<br>";
 message += remaining.weeks + " Weeks<br>";
 message += remaining.daysToMonth + " Days To Month<br>";
