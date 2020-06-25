@@ -453,6 +453,14 @@ footer section::after {
 background: none;
 }
 
+footer {
+text-align: center;
+}
+
+footer p {
+margin-bottom: 0px;
+}
+
 @media screen and (hover: none) {
 body.no-scroll {
 padding-right: 0;
