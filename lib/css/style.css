@@ -13,6 +13,7 @@
 --navbar: #fff;
 --text-button: #fff;
 --eee: #eee;
+--comments: #5c6370;
 --overlay: 255, 255, 255;
 --fill: #fff;
 --fill-menu: #000;
@@ -43,6 +44,7 @@
 --primary-rgb: 255, 255, 255;
 --text-button: #000;
 --eee: #3b3b3b;
+--comments: #9c9c9c;
 --overlay: 66, 66, 66;
 --fill: #000;
 --fill-menu: #fff;
@@ -278,7 +280,7 @@ color: #d19a66;
 }
 
 .comments {
-color: #5c6370;
+color: var(--comments);
 font-style: italic;
 }
 
