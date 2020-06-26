@@ -240,18 +240,46 @@ todalSeconds
 <p>Code examples.</p>
 </header>
 <h2>Example 1.</h2>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
+<pre><div class="javascript code"><span class="reserved">var</span> counterElement <span class="operators">=</span> document.querySelector(<span class="strings">".counter"</span>);<span class="comments"> // Select #counter</span>
 
-  <span class="reserved">if</span> (finished) <span class="operators">{</span>
-    
-    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
+<span class="reserved">var</span> secondsTotalElement <span class="operators">=</span> document.querySelector(<span class="strings">"#seconds-total"</span>);<span class="comments"> // Select #seconds-total</span>
+<span class="reserved">var</span> minutesTotalElement <span class="operators">=</span> document.querySelector(<span class="strings">"#minutes-total"</span>);<span class="comments"> // Select #minutes-total</span>
+<span class="reserved">var</span> hoursTotalElement <span class="operators">=</span> document.querySelector(<span class="strings">"#hours-total"</span>);<span class="comments"> // Select #hours-total</span>
+<span class="reserved">var</span> daysTotalElement <span class="operators">=</span> document.querySelector(<span class="strings">"#days-total"</span>);<span class="comments"> // Select #days-total</span>
+<span class="reserved">var</span> yearsElement <span class="operators">=</span> document.querySelector(<span class="strings">"#years"</span>);<span class="comments"> // Select #years</span>
+<span class="reserved">var</span> monthsToYearElement <span class="operators">=</span> document.querySelector(<span class="strings">"#months-to-year"</span>);<span class="comments"> // Select #months-to-year</span>
+<span class="reserved">var</span> monthsElement <span class="operators">=</span> document.querySelector(<span class="strings">"#months"</span>);<span class="comments"> // Select #months</span>
+<span class="reserved">var</span> weeksToMonthElement <span class="operators">=</span> document.querySelector(<span class="strings">"#weeks-to-month"</span>);<span class="comments"> // Select #weeks-to-month</span>
+<span class="reserved">var</span> weeksElement <span class="operators">=</span> document.querySelector(<span class="strings">"#weeks"</span>);<span class="comments"> // Select #weeks</span>
+<span class="reserved">var</span> daysToMonthElement <span class="operators">=</span> document.querySelector(<span class="strings">"#days-to-month"</span>);<span class="comments"> // Select #days-to-month</span>
+<span class="reserved">var</span> daysToWeekElement <span class="operators">=</span> document.querySelector(<span class="strings">"#days-to-week"</span>);<span class="comments"> // Select #days-to-week</span>
+<span class="reserved">var</span> daysElement <span class="operators">=</span> document.querySelector(<span class="strings">"#days"</span>);<span class="comments"> // Select #days</span>
+<span class="reserved">var</span> hoursElement <span class="operators">=</span> document.querySelector(<span class="strings">"#hours"</span>);<span class="comments"> // Select #hours</span>
+<span class="reserved">var</span> minutesElement <span class="operators">=</span> document.querySelector(<span class="strings">"#minutes"</span>);<span class="comments"> // Select #minutes</span>
+<span class="reserved">var</span> secondsElement <span class="operators">=</span> document.querySelector(<span class="strings">"#seconds"</span>);<span class="comments"> // Select #seconds</span>
+<span class="reserved">var</span> endDate <span class="operators">=</span> (<span class="reserved">new</span> Date().getFullYear() <span class="operators">+</span> <span class="numbers">10</span>) <span class="operators">+</span> <span class="strings">"/01/01"</span>;<span class="comments"> // Select date (Default javascript date format)</span>
 
-  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
+<span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(endDate, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span><span class="comments"> // Setup countdown</span>
 
-    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
-
-  <span class="operators">}</span>
-
+<span class="reserved">if</span> (finished) <span class="operators">{</span>
+counterElement.textContent <span class="operators">=</span> <span class="strings">"Expired"</span>;<span class="comments"> // Show text when expired</span>
+<span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
+secondsTotalElement.textContent <span class="operators">=</span> remaining.totalSeconds;
+minutesTotalElement.textContent <span class="operators">=</span> remaining.totalMinutes;
+hoursTotalElement.textContent <span class="operators">=</span> remaining.totalHours;
+daysTotalElement.textContent <span class="operators">=</span> remaining.totalDays;
+yearsElement.textContent <span class="operators">=</span> remaining.years;
+monthsToYearElement.textContent <span class="operators">=</span> remaining.monthsToYear;
+monthsElement.textContent <span class="operators">=</span> remaining.months;
+weeksToMonthElement.textContent <span class="operators">=</span> remaining.weeksToMonth;
+weeksElement.textContent <span class="operators">=</span> remaining.weeks;
+daysToMonthElement.textContent <span class="operators">=</span> remaining.daysToMonth;
+daysToWeekElement.textContent <span class="operators">=</span> remaining.daysToWeek;
+daysElement.textContent <span class="operators">=</span> remaining.days;
+hoursElement.textContent <span class="operators">=</span> remaining.hours;
+minutesElement.textContent <span class="operators">=</span> remaining.minutes;
+secondsElement.textContent <span class="operators">=</span> remaining.seconds;
+<span class="operators">}</span>
 <span class="operators">}</span>);
 </div></pre>
 
