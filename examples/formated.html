@@ -171,6 +171,14 @@ transition: 500ms all;
 <li><span id="seconds">0</span>Seconds</li>
 </ul>
 </div>
+<footer>
+<li class="li-switch"><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Light/Dark Mode</div></li>
+</footer>
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var daysElement = document.querySelector("#days"); // Select #days
@@ -191,6 +199,27 @@ hoursElement.textContent = remaining.hours;
 minutesElement.textContent = remaining.minutes;
 secondsElement.textContent = remaining.seconds;
 });
+
+
+const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
+const currenttheme = localStorage.getItem('theme');
+if (currenttheme) {
+document.documentElement.setAttribute('data-theme', currenttheme);
+if (currenttheme === 'dark') {
+toggletheme.checked = true;
+}
+}
+function switchtheme(e) {
+if (e.target.checked) {
+document.documentElement.setAttribute('data-theme', 'dark');
+localStorage.setItem('theme', 'dark');
+}
+else {
+document.documentElement.setAttribute('data-theme', 'light');
+localStorage.setItem('theme', 'light');
+}
+}
+toggletheme.addEventListener('change', switchtheme, false);
 </script>
 </body>
 </html>
