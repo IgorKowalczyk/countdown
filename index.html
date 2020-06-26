@@ -307,41 +307,6 @@ secondsElement.textContent <span class="operators">=</span> remaining.seconds;
 <button class="a">See Example</button>
 </a>
 <br>
-<h2 class="line">Example 2. - Birthday</h2>
-<pre><div class="javascript code"><span class="reserved">var</span> daysElement <span class="operators">=</span> document.querySelector(<span class="strings">"#days"</span>);<span class="comments"> // Select #days</span>
-<span class="reserved">var</span> hoursElement <span class="operators">=</span> document.querySelector(<span class="strings">"#hours"</span>);<span class="comments"> // Select #hours</span>
-<span class="reserved">var</span> minutesElement <span class="operators">=</span> document.querySelector(<span class="strings">"#minutes"</span>);<span class="comments"> // Select #minutes</span>
-<span class="reserved">var</span> secondsElement <span class="operators">=</span> document.querySelector(<span class="strings">"#seconds"</span>);<span class="comments"> // Select #seconds</span>
-<span class="reserved">var</span> containerElement <span class="operators">=</span> document.querySelector(<span class="strings">".container"</span>);<span class="comments"> // Select container</span>
-<span class="reserved">var</span> endDate <span class="operators">=</span> (<span class="reserved">new</span> Date().getFullYear()) <span class="operators">+</span> <span class="strings">"/08/02"</span>;<span class="comments"> // Select date (Default javascript date format)</span>
-
-<span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(endDate, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span><span class="comments"> // Setup countdown</span>
-
-<span class="reserved">if</span> (finished) <span class="operators">{</span>
-containerElement.textContent <span class="operators">=</span> <span class="strings">"Expired"</span>;<span class="comments"> // Show text when expired</span>
-<span class="operators">}</span>
-
-daysElement.textContent <span class="operators">=</span> remaining.totalDays;<span class="comments"> // Render message</span>
-hoursElement.textContent <span class="operators">=</span> remaining.hours;
-minutesElement.textContent <span class="operators">=</span> remaining.minutes;
-secondsElement.textContent <span class="operators">=</span> remaining.seconds;
-
-<span class="operators">}</span>);
-</div></pre>
-<pre><div class="html code"><span class="reserved"><span class="operators">&lt;</span>div </span>class<span class="operators">=</span><span class="strings">"container"</span><span class="operators">&gt;</span>
-<span class="reserved"><span class="operators">&lt;</span>h1<span class="operators">&gt;</span></span>Countdown to my birthday:<span class="reserved"><span class="operators">&lt;</span>/h1<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>ul<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>li<span class="operators">&gt;</span></span><span class="reserved"><span class="operators">&lt;</span>span </span>id<span class="operators">=</span><span class="strings">"days"</span><span class="operators">&gt;</span><span class="numbers">0</span><span class="reserved"><span class="operators">&lt;</span>/span<span class="operators">&gt;</span></span>days<span class="reserved"><span class="operators">&lt;</span>/li<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>li<span class="operators">&gt;</span></span><span class="reserved"><span class="operators">&lt;</span>span </span>id<span class="operators">=</span><span class="strings">"hours"</span><span class="operators">&gt;</span><span class="numbers">0</span><span class="reserved"><span class="operators">&lt;</span>/span<span class="operators">&gt;</span></span>Hours<span class="reserved"><span class="operators">&lt;</span>/li<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>li<span class="operators">&gt;</span></span><span class="reserved"><span class="operators">&lt;</span>span </span>id<span class="operators">=</span><span class="strings">"minutes"</span><span class="operators">&gt;</span><span class="numbers">0</span><span class="reserved"><span class="operators">&lt;</span>/span<span class="operators">&gt;</span></span>Minutes<span class="reserved"><span class="operators">&lt;</span>/li<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>li<span class="operators">&gt;</span></span><span class="reserved"><span class="operators">&lt;</span>span </span>id<span class="operators">=</span><span class="strings">"seconds"</span><span class="operators">&gt;</span><span class="numbers">0</span><span class="reserved"><span class="operators">&lt;</span>/span<span class="operators">&gt;</span></span>Seconds<span class="reserved"><span class="operators">&lt;</span>/li<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>/ul<span class="operators">&gt;</span></span>
-<span class="reserved"><span class="operators">&lt;</span>/div<span class="operators">&gt;</span></span>
-</div></pre>
-<a href="https://igorkowalczyk.github.io/countdown.js/examples/birthday">
-<button class="a">See Example</button>
-</a>
-<br>
 </section>
 <footer>
 <li class="li-switch"><div class="theme-switch-container">
