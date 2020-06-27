@@ -262,6 +262,21 @@ todalSeconds
 <button class="a">See Example</button>
 </a>
 <br>
+<h2>Example 2. - Static Date</h2>
+<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
+
+  <span class="reserved">if</span> (finished) <span class="operators">{</span>
+    
+    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
+
+  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
+
+    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
+
+  <span class="operators">}</span>
+
+<span class="operators">}</span>);
+</div></pre>
 </section>
 <footer>
 <li class="li-switch"><div class="theme-switch-container">
