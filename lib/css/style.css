@@ -6,7 +6,7 @@
 --switch-slider: #888;
 --text: #333;
 --primary: #fff;
---line: #00a3a3;
+--line: #999999;
 --line-rgb: 0, 163, 163;
 --button: #00a3a3;
 --primary-rgb: 255, 194, 0;
@@ -36,7 +36,7 @@
 --switch-slider: #fff;
 --text: #fff;
 --primary: #fff;
---line: #fff;
+--line: #6e6e6e;
 --line-rgb: 255, 255, 255;
 --button: #fff;
 --navbar: #222;
@@ -157,23 +157,6 @@ box-shadow: 0 3px 30px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
 .svg, .a {
 margin: auto;
 fill: var(--fill);
-}
-
-.line {
-position: relative;
-}
-
-.line::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-width: 40%;
-margin: auto;
-height: 1px;
-background: linear-gradient(to right, rgba(var(--primary-rgb), 0), #bdbdbd, rgba(var(--primary-rgb), 0));
-transition: 500ms all;
 }
 
 h1, h2, h3 {
@@ -445,7 +428,7 @@ bottom: 0;
 left: 0;
 right: 0;
 height: 1px;
-background: linear-gradient(to right, rgba(var(--line-rgb), 0), var(--line), rgba(var(--line-rgb), 0));
+background: var(--line);
 transition: 500ms all;
 }
 
