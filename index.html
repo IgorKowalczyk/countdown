@@ -27,7 +27,7 @@ ga('send', 'pageview');
 <div id="overlay"></div>
 <div class="header">
 <i id="menu" class="menu-shadow">
-<svg height="2rem" viewBox="0 0 24 24" width="2rem"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
+<svg width="32px" height="32px" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
 </div>
 <nav id="navbar">
 <header>
@@ -63,10 +63,10 @@ ga('send', 'pageview');
 </header>
 <br>
 <h2 class="line">Download</h2>
-<p>Download Stable Version (<code class="code">v0.0.1</code>) [Recomended!].</p>
+<p>Download Stable Version (<code class="code">v0.0.2</code>) [Recomended!].</p>
 <p class="small">This version is stable, the configuration and other content will not be changed. It will always be compatible with the code.</p>
-<a href="https://igorkowalczyk.github.io/countdown.js/download/v0.0.1/countdown.min.js">
-<button class="a">Download v0.0.1</button>
+<a href="https://igorkowalczyk.github.io/countdown.js/download/v0.0.2/countdown.min.js">
+<button class="a">Download v0.0.2</button>
 </a>
 <br>
 <p>Download Unstable Version</p>
@@ -239,46 +239,31 @@ todalSeconds
 <h1>Examples</h1>
 <p>Code examples.</p>
 </header>
-<h2>Example 1.</h2>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
+<h2>Example 1. - Simple</h2>
+<pre><div class="javascript code"><span class="reserved">var</span> counterElement <span class="operators">=</span> document.querySelector(<span class="strings">"#counter"</span>);<span class="comments"> // Select "p" with "counter" ID</span>
+<span class="reserved">var</span> endDate <span class="operators">=</span> (<span class="reserved">new</span> Date().getFullYear() <span class="operators">+</span> <span class="numbers">1</span>) <span class="operators">+</span> <span class="strings">"/01/01"</span>;<span class="comments"> // Select date (Default javascript date format)</span>
+
+<span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(endDate, <span class="reserved">function</span>(remaining, finished) <span class="operators">{</span><span class="comments"> // Setup countdown</span>
+
+  <span class="reserved">var</span> message <span class="operators">=</span> <span class="strings">""</span>;<span class="comments"> // Default message</span>
 
   <span class="reserved">if</span> (finished) <span class="operators">{</span>
-    
-    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
-
-  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
-
-    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
-
+    message <span class="operators">=</span> <span class="strings">"Expired"</span>;<span class="comments"> // Show text when expire</span>
+  <span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
+    message <span class="operators">=</span> remaining.totalDays <span class="operators">+</span> <span class="strings">" d "</span>;<span class="comments"> // Else</span>
+    message <span class="operators">+=</span> remaining.minutes <span class="operators">+</span> <span class="strings">" m "</span>;<span class="comments"> // Else</span>
+    message <span class="operators">+=</span> remaining.seconds <span class="operators">+</span> <span class="strings">" s "</span>;<span class="comments"> // Else</span>
   <span class="operators">}</span>
 
+  counterElement.textContent <span class="operators">=</span> message;<span class="comments"> // Render message</span>
 <span class="operators">}</span>);
 </div></pre>
-
-<h2 class="line">Example 2.</h2>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="reserved">new</span> Date(<span class="strings">"2050-01-01T12:05:55Z"</span>), <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
-
-  <span class="reserved">if</span> (finished) <span class="operators">{</span>
-    
-    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
-
-  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
-
-    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
-
-  <span class="operators">}</span>
-
-<span class="operators">}</span>);
-</div></pre>
+<a href="https://igorkowalczyk.github.io/countdown.js/examples/simple">
+<button class="a">See Example</button>
+</a>
+<br>
 </section>
-
 <footer>
-<section>
-<h3 id="Links">Links</h3>
-<ul>
-<li></li>
-</ul>
-</section>
 <li class="li-switch"><div class="theme-switch-container">
 <label class="theme-switch" for="checkbox">
 <input type="checkbox" id="checkbox"/>

@@ -1,7 +1,7 @@
-# countdown.js
+# Countdown.js
 A simple and easy-to-use countdown.
 
-## [Docs](https://igorkowalczyk.github.io/countdown.js/) / [Download](https://github.com/igorkowalczyk/countdown.js/archive/master.zip) / [Demo](https://igorkowalczyk.github.io/countdown.js/examples/soon)
+[Docs](https://igorkowalczyk.github.io/countdown.js/) / [Download](https://github.com/igorkowalczyk/countdown.js/archive/master.zip) / [Demo](https://igorkowalczyk.github.io/countdown.js/examples/birthday)
 
 ## How to use
 
@@ -122,8 +122,6 @@ The first parameter contains the following calculations related to the countdown
 | totalSeconds |
 
 The second parameter indicates whether the countdown is over.
-
-# More docs in [official docs] (https://https://igorkowalczyk.github.io/countdown.js)
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](https://igorkowalczyk.github.io/countdown.js/license.txt) file for details

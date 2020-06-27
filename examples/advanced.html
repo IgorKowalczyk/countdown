@@ -8,9 +8,37 @@
 <meta name="description" content="Countdown.js - Advanced counter example.">
 <link rel="shortcut icon" href="https://igorkowalczyk.github.io/lib/favicon/favicon.jpg">
 <link rel="canonical" href="/countdown.js/examples/advanced">
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-153609882-1', 'auto');
+ga('send', 'pageview');
+</script> 
 </head>
 <body ondragstart="return false" ondrag="return false">
 <style>
+:root {
+--background: #fff;
+--text: #333;
+--color-888: #888;
+--switch-slider: #888;
+}
+
+[data-theme="dark"] {
+--background: #222;
+--text: #fff;
+--color-888: #000;
+--switch-slider: #fff;
+}
+
+@font-face {
+font-family: 'Montserrat';
+src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light.ttf);
+}
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -22,44 +50,218 @@ height: 100%;
 }
 
 body {
-background-color: #ffd54f;
+background-color: var(--background);
+color: var(--text);
+font-family: 'Montserrat';
 display: flex;
 align-items: center;
 justify-content: center;
+transition: 500ms;
+position: relative;
+}
+
+.container {
+text-align: center;
+}
+
+h1 {
+font-weight: normal;
+}
+
+li {
+display: inline-block;
+font-size: 1.5em;
+list-style-type: none;
+padding: 1em;
+text-transform: uppercase;
+}
+
+li span {
+display: block;
+font-size: 4.5rem;
+}
+
+footer {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+text-align: center;
+}
+
+.theme-switch, .switch {
+display: inline-block;
+height: 34px;
+position: relative;
+width: 60px;
+}
+
+.theme-switch input, .switch input {
+display: none;
+}
+
+.theme-switch-container, .switch-container {
+position: sticky;
+top: 0;
+}
+
+.slider, .slider-switch {
+background-color: rgba(31, 31, 31, 0.8);
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;
+}
+
+.slider-switch:before {
+background-color: var(--switch-slider);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+.slider:before {
+background-color: var(--color-888);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+input:checked + .slider, input:checked + .slider-switch {
+background-color: #888;
+}
+
+input:checked + .slider:before, input:checked + .slider-switch:before {
+transform: translateX(26px);
+background-color: #fff;
+}
+
+.slider.round, .slider-switch.round {
+border-radius: 34px;
+}
+
+.slider.round:before, .slider-switch.round:before {
+border-radius: 50%;
+}
+
+.li-switch {
+list-style: none;
+}
+
+.theme-switch-container {
+display: flex;
+align-items: center;
+justify-content: center;
+transition: 500ms all;
+}
+
+.option-description {
+text-align: center;
+transition: 500ms all;
 }
 </style>
-<p id="counter"></p>
+<div class="container">
+<h1>Advanced</h1>
+<ul>
+<li><span id="seconds-total">0</span>Total Seconds</li>
+<li><span id="minutes-total">0</span>Total Minutes</li>
+<li><span id="hours-total">0</span>Total Hours</li>
+<li><span id="days-total">0</span>Total Days</li>
+<li><span id="years">0</span>Years</li>
+<li><span id="months-to-year">0</span>Months To Year</li>
+<li><span id="months">0</span>Months</li>
+<li><span id="weeks-to-month">0</span>Weeks To Month</li>
+<li><span id="weeks">0</span>weeks</li>
+<li><span id="days-to-month">0</span>Days To Month</li>
+<li><span id="days-to-week">0</span>Days To Week</li>
+<li><span id="days">0</span>Days</li>
+<li><span id="hours">0</span>Hours</li>
+<li><span id="minutes">0</span>Minutes</li>
+<li><span id="seconds">0</span>Seconds</li>
+</ul>
+</div>
+<footer>
+<li class="li-switch"><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Light/Dark Mode</div></li>
+</footer>
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
-var counterElement = document.querySelector("#counter"); // Select #counter
+var counterElement = document.querySelector(".counter"); // Select #counter
+
+var secondsTotalElement = document.querySelector("#seconds-total"); // Select #seconds-total
+var minutesTotalElement = document.querySelector("#minutes-total"); // Select #minutes-total
+var hoursTotalElement = document.querySelector("#hours-total"); // Select #hours-total
+var daysTotalElement = document.querySelector("#days-total"); // Select #days-total
+var yearsElement = document.querySelector("#years"); // Select #years
+var monthsToYearElement = document.querySelector("#months-to-year"); // Select #months-to-year
+var monthsElement = document.querySelector("#months"); // Select #months
+var weeksToMonthElement = document.querySelector("#weeks-to-month"); // Select #weeks-to-month
+var weeksElement = document.querySelector("#weeks"); // Select #weeks
+var daysToMonthElement = document.querySelector("#days-to-month"); // Select #days-to-month
+var daysToWeekElement = document.querySelector("#days-to-week"); // Select #days-to-week
+var daysElement = document.querySelector("#days"); // Select #days
+var hoursElement = document.querySelector("#hours"); // Select #hours
+var minutesElement = document.querySelector("#minutes"); // Select #minutes
+var secondsElement = document.querySelector("#seconds"); // Select #seconds
 var endDate = (new Date().getFullYear() + 10) + "/01/01"; // Select date (Default javascript date format)
 
 var myCountDown = new countdown(endDate, function (remaining, finished) { // Setup countdown
 
-var message = ""; // Default message
-
 if (finished) {
-message = "Expired"; // Show text when expired
+counterElement.textContent = "Expired"; // Show text when expired
 } else {
-message += remaining.totalSeconds + " totalSeconds "; // Else
-message += remaining.totalMinutes + " totalMinutes ";
-message += remaining.totalHours + " totalHours ";
-message += remaining.totalDays + " totalDays ";
-message += remaining.years + " years ";
-message += remaining.monthsToYear + " monthsToYear ";
-message += remaining.months + " months ";
-message += remaining.weeksToMonth + " weeksToMonth ";
-message += remaining.weeks + " weeks ";
-message += remaining.daysToMonth + " daysToMonth ";
-message += remaining.daysToWeek + " daysToWeek ";
-message += remaining.days + " days ";
-message += remaining.hours + " hours ";
-message += remaining.minutes + " minutes ";
-message += remaining.seconds + " seconds ";
+secondsTotalElement.textContent = remaining.totalSeconds;
+minutesTotalElement.textContent = remaining.totalMinutes;
+hoursTotalElement.textContent = remaining.totalHours;
+daysTotalElement.textContent = remaining.totalDays;
+yearsElement.textContent = remaining.years;
+monthsToYearElement.textContent = remaining.monthsToYear;
+monthsElement.textContent = remaining.months;
+weeksToMonthElement.textContent = remaining.weeksToMonth;
+weeksElement.textContent = remaining.weeks;
+daysToMonthElement.textContent = remaining.daysToMonth;
+daysToWeekElement.textContent = remaining.daysToWeek;
+daysElement.textContent = remaining.days;
+hoursElement.textContent = remaining.hours;
+minutesElement.textContent = remaining.minutes;
+secondsElement.textContent = remaining.seconds;
 }
-
-counterElement.textContent = message; // Render message
 });
+
+const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
+const currenttheme = localStorage.getItem('theme');
+if (currenttheme) {
+document.documentElement.setAttribute('data-theme', currenttheme);
+if (currenttheme === 'dark') {
+toggletheme.checked = true;
+}
+}
+function switchtheme(e) {
+if (e.target.checked) {
+document.documentElement.setAttribute('data-theme', 'dark');
+localStorage.setItem('theme', 'dark');
+}
+else {
+document.documentElement.setAttribute('data-theme', 'light');
+localStorage.setItem('theme', 'light');
+}
+}
+toggletheme.addEventListener('change', switchtheme, false);
 </script>
 </body>
 </html>
