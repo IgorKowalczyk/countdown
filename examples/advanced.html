@@ -19,6 +19,7 @@ ga('send', 'pageview');
 </script> 
 </head>
 <body ondragstart="return false" ondrag="return false">
+<!-- Only for demo style -->
 <style>
 :root {
 --background: #fff;
@@ -171,6 +172,7 @@ text-align: center;
 transition: 500ms all;
 }
 </style>
+<!-- /Only for demo style -->
 <div class="container">
 <h1>Advanced</h1>
 <ul>
@@ -191,6 +193,7 @@ transition: 500ms all;
 <li><span id="seconds">0</span>Seconds</li>
 </ul>
 </div>
+<!-- Only for dark mode -->
 <footer>
 <li class="li-switch"><div class="theme-switch-container">
 <label class="theme-switch" for="checkbox">
@@ -199,6 +202,7 @@ transition: 500ms all;
 </label>
 </div><div class="option-description">Light/Dark Mode</div></li>
 </footer>
+<!-- Only for dark mode -->
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var counterElement = document.querySelector(".counter"); // Select #counter
@@ -243,6 +247,7 @@ secondsElement.textContent = remaining.seconds;
 }
 });
 
+/* Only for dark mode */
 const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
 const currenttheme = localStorage.getItem('theme');
 if (currenttheme) {
@@ -262,6 +267,7 @@ localStorage.setItem('theme', 'light');
 }
 }
 toggletheme.addEventListener('change', switchtheme, false);
+/* /Only for dark mode */
 </script>
 </body>
 </html>
