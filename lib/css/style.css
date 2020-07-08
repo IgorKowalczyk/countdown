@@ -64,7 +64,7 @@
 
 @font-face {
 font-family: 'Montserrat';
-src: url(https://igorkowalczyk.github.io/countdown.js/lib/fonts/montserrat-light.ttf);
+src: url(../lib/fonts/montserrat-light.ttf);
 }
 
 .no-js {
@@ -157,7 +157,7 @@ text-align: center;
 display: grid;
 }
 
-.center-button.button .button {
+.center-button .button {
 justify-self: center;
 }
 
