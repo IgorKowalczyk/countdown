@@ -8,7 +8,8 @@
 --primary: #fff;
 --line: #999999;
 --line-rgb: 0, 163, 163;
---button: #00a3a3;
+--button: rgba(227, 227, 227, 0.8);
+--button-hover: rgba(227, 227, 227, 0.5);
 --primary-rgb: 255, 194, 0;
 --navbar: #fff;
 --text-button: #fff;
@@ -38,7 +39,8 @@
 --primary: #fff;
 --line: #6e6e6e;
 --line-rgb: 255, 255, 255;
---button: #fff;
+--button: #404040;
+--buton-hover: #4a4a4a;
 --navbar: #222;
 --primary-rgb: 255, 255, 255;
 --text-button: #000;
@@ -94,7 +96,7 @@ scroll-behavior: smooth;
 overflow-x: hidden;
 }
 
-*, *:before, *:after {
+* {
 box-sizing: inherit;
 outline: none;
 scrollbar-color: #353535 transparent;
@@ -134,29 +136,32 @@ padding-right: 17px;
 transition: 500ms all;
 }
 
-button {
-font-family: "Montserrat";
-display: flex;
-border: none;
+.button {
+line-height: 20px;
+padding: 12px 24px 12px 24px;
+font-weight: 700;
+display: inline-block;
+margin: 5px;
+word-break: keep-all;
+justify-self: left;
+font-size: 14px;
+font-weight: 200;
+color: var(--text);
 background: var(--button);
-font-size: 1.30rem;
-color: var(--text-button);
-padding: 10px 20px 10px 20px;
-margin: 10px;
-border-radius: 5px;
-box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
-cursor: pointer;
+text-decoration: none;
+border-radius: 4px;
 transition: 500ms all;
+text-align: center;
 }
 
-button:hover {
-transform: scale(1.1);
-box-shadow: 0 3px 30px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+.button:hover {
+background: var(--button-hover);
+color: var(--text);
 }
 
-.svg, .a {
+.button svg {
 margin: auto;
-fill: var(--fill);
+fill: var(--fill-menu);
 }
 
 h1, h2, h3 {
@@ -292,17 +297,6 @@ table td, table th {
 padding: 1rem;
 text-align: left;
 word-break: break-word;
-}
-
-a, a:hover, a:active, a:focus {
-text-decoration: none;
-color: var(--primary);
-display: contents;
-transition: 500ms all;
-}
-
-a:hover {
-opacity: 0.5;
 }
 
 section {
