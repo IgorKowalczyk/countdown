@@ -19,6 +19,7 @@ ga('send', 'pageview');
 </script> 
 </head>
 <body ondragstart="return false" ondrag="return false">
+<!-- Only for demo style -->
 <style>
 :root {
 --background: #fff;
@@ -45,13 +46,8 @@ margin: 0;
 padding: 0;
 }
 
-html, body {
-height: 100%;
-}
-
 body {
 background-color: var(--background);
-font-size: 4.5rem;
 color: var(--text);
 font-family: 'Montserrat';
 display: flex;
@@ -59,13 +55,40 @@ align-items: center;
 justify-content: center;
 transition: 500ms;
 position: relative;
+display: flex;
+flex-direction: column;
+height: 100%;
+word-break: break-all;
+}
+
+html, body {
+min-height: 100%;
+}
+
+.container {
+text-align: center;
+flex: 1 0 auto;
+}
+
+h1 {
+font-weight: normal;
+}
+
+li {
+display: inline-block;
+font-size: 1.5em;
+list-style-type: none;
+padding: 1em;
+text-transform: uppercase;
+}
+
+li span {
+display: block;
+font-size: 4.5rem;
 }
 
 footer {
-position: absolute;
-right: 0;
-bottom: 0;
-left: 0;
+flex-shrink: 0;
 text-align: center;
 }
 
@@ -151,7 +174,18 @@ text-align: center;
 transition: 500ms all;
 }
 </style>
+<!-- /Only for demo style -->
 <p id="counter"></p>
+<!-- Only for dark mode -->
+<footer>
+<li class="li-switch"><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Light/Dark Mode</div></li>
+</footer>
+<!-- Only for dark mode -->
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var counterElement = document.querySelector("#counter"); // Select "p" with "counter" ID
@@ -172,6 +206,7 @@ var myCountDown = new countdown(endDate, function(remaining, finished) { // Setu
   counterElement.textContent = message; // Render message
 });
 
+/* Only for dark mode */
 const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
 const currenttheme = localStorage.getItem('theme');
 if (currenttheme) {
@@ -191,6 +226,7 @@ localStorage.setItem('theme', 'light');
 }
 }
 toggletheme.addEventListener('change', switchtheme, false);
+/* /Only for dark mode */
 </script>
 </body>
 </html>

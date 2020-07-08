@@ -19,6 +19,7 @@ ga('send', 'pageview');
 </script> 
 </head>
 <body ondragstart="return false" ondrag="return false">
+<!-- Only for demo style -->
 <style>
 :root {
 --background: #fff;
@@ -45,10 +46,6 @@ margin: 0;
 padding: 0;
 }
 
-html, body {
-height: 100%;
-}
-
 body {
 background-color: var(--background);
 color: var(--text);
@@ -58,10 +55,19 @@ align-items: center;
 justify-content: center;
 transition: 500ms;
 position: relative;
+display: flex;
+flex-direction: column;
+height: 100%;
+word-break: break-all;
+}
+
+html, body {
+min-height: 100%;
 }
 
 .container {
 text-align: center;
+flex: 1 0 auto;
 }
 
 h1 {
@@ -82,10 +88,7 @@ font-size: 4.5rem;
 }
 
 footer {
-position: absolute;
-right: 0;
-bottom: 0;
-left: 0;
+flex-shrink: 0;
 text-align: center;
 }
 
@@ -171,6 +174,7 @@ text-align: center;
 transition: 500ms all;
 }
 </style>
+<!-- /Only for demo style -->
 <div class="container">
 <h1>Countdown to my birthday:</h1>
 <ul>
@@ -180,6 +184,7 @@ transition: 500ms all;
 <li><span id="seconds">0</span>Seconds</li>
 </ul>
 </div>
+<!-- Only for dark mode -->
 <footer>
 <li class="li-switch"><div class="theme-switch-container">
 <label class="theme-switch" for="checkbox">
@@ -188,6 +193,7 @@ transition: 500ms all;
 </label>
 </div><div class="option-description">Light/Dark Mode</div></li>
 </footer>
+<!-- Only for dark mode -->
 <script src="/countdown.js/download/countdown.min.js"></script> <!-- Delete /countdown.js/ if you use it in your project or replace the script with your file source. -->
 <script type="text/javascript">
 var daysElement = document.querySelector("#days"); // Select #days
@@ -210,6 +216,7 @@ secondsElement.textContent = remaining.seconds;
 
 });
 
+/* Only for dark mode */
 const toggletheme = document.querySelector('.theme-switch input[type="checkbox"]');
 const currenttheme = localStorage.getItem('theme');
 if (currenttheme) {
@@ -229,6 +236,7 @@ localStorage.setItem('theme', 'light');
 }
 }
 toggletheme.addEventListener('change', switchtheme, false);
+/* /Only for dark mode */
 </script>
 </body>
 </html>
