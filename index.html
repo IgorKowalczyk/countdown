@@ -240,40 +240,30 @@ todalSeconds
 <h1>Examples</h1>
 </header>
 <h4>Example 1. - Simple</h4>
-<pre><div class="javascript code"><span class="reserved">var</span> counterElement <span class="operators">=</span> document.querySelector(<span class="strings">"#counter"</span>);<span class="comments"> // Select "p" with "counter" ID</span>
-<span class="reserved">var</span> endDate <span class="operators">=</span> (<span class="reserved">new</span> Date().getFullYear() <span class="operators">+</span> <span class="numbers">1</span>) <span class="operators">+</span> <span class="strings">"/01/01"</span>;<span class="comments"> // Select date (Default javascript date format)</span>
-
-<span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved">new</span> countdown(endDate, <span class="reserved">function</span>(remaining, finished) <span class="operators">{</span><span class="comments"> // Setup countdown</span>
-
-  <span class="reserved">var</span> message <span class="operators">=</span> <span class="strings">""</span>;<span class="comments"> // Default message</span>
-
+<pre><div class="javascript code"><span class="reserved">var</span> counterElement <span class="operators">=</span> document.querySelector(<span class="strings">"#counter"</span>);<span class="comments"> // Select "p" with "counter" ID</span><br><span class="reserved">var</span> endDate <span class="operators">=</span> (<span class="reserved">new</span> Date().getFullYear() <span class="operators">+</span> <span class="numbers">1</span>) <span class="operators">+</span> <span class="strings">"/01/01"</span>;<span class="comments"> // Select date (Default javascript date format)</span><br><span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved"> new</span> countdown(endDate, <span class="reserved">function</span>(remaining, finished) <span class="operators">{</span><span class="comments"> // Setup countdown</span><br><br><span class="reserved">var</span> message <span class="operators">=</span> <span class="strings">""</span>;<span class="comments"> // Default message</span>
+<br>
   <span class="reserved">if</span> (finished) <span class="operators">{</span>
-    message <span class="operators">=</span> <span class="strings">"Expired"</span>;<span class="comments"> // Show text when expire</span>
-  <span class="operators">}</span> <span class="reserved">else</span> <span class="operators">{</span>
+    message <span class="operators">=</span> <span class="strings">"Expired"</span>;<span class="comments"> // Show text when expire</span>  <br>
+  <span class="operators">}  </span><span class="reserved">else</span><span class="operators">  {</span>
     message <span class="operators">=</span> remaining.totalDays <span class="operators">+</span> <span class="strings">" d "</span>;<span class="comments"> // Else</span>
     message <span class="operators">+=</span> remaining.minutes <span class="operators">+</span> <span class="strings">" m "</span>;<span class="comments"> // Else</span>
-    message <span class="operators">+=</span> remaining.seconds <span class="operators">+</span> <span class="strings">" s "</span>;<span class="comments"> // Else</span>
-  <span class="operators">}</span>
+    message <span class="operators">+=</span> remaining.seconds <span class="operators">+</span> <span class="strings">" s "</span>;<span class="comments"> // Else</span><br>  <span class="operators">}</span>
 
-  counterElement.textContent <span class="operators">=</span> message;<span class="comments"> // Render message</span>
-<span class="operators">}</span>);
+  counterElement.textContent <span class="operators">=</span> message;<span class="comments"> // Render message</span><br><span class="operators">});</span>
 </div></pre>
 <a href="./examples/simple" target="_blank" class="button">See Example</a>
 <br>
 <h4>Example 2. - Static Date</h4>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span>
-
-  <span class="reserved">if</span> (finished) <span class="operators">{</span>
+<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span><br><br><span class="reserved">if</span> (finished) <span class="operators">{</span>
     
     document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
 
   <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
-
-    document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
+document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
 
   <span class="operators">}</span>
 
-<span class="operators">}</span>);
+<span class="operators">});</span>
 </div></pre>
 </section>
 <footer>
