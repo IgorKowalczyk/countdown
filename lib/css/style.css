@@ -149,7 +149,6 @@ color: var(--text);
 background: var(--button);
 text-decoration: none;
 border-radius: 4px;
-transition: 500ms all;
 text-align: center;
 }
 
@@ -171,37 +170,46 @@ margin: auto;
 fill: var(--fill-menu);
 }
 
+.button * {
+transition: 500ms all;
+}
+
 h1, h2, h3 {
 margin-bottom: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
 font-weight: 700;
-transition: 500ms all;
 }
 
 h1 {
 font-size: 2.14rem;
+transition: 500ms all;
 }
 
 h2 {
 font-size: 1.76rem;
+transition: 500ms all;
 }
 
 h3 {
 font-size: 1.5rem;
+transition: 500ms all;
 }
 
 h4 {
 font-size: 1.30rem;
+transition: 500ms all;
 }
 
 h5 {
 font-size: 1.20rem;
+transition: 500ms all;
 }
 
 h6 {
 font-size: 1rem;
+transition: 500ms all;
 }
 
 .center {
@@ -234,7 +242,6 @@ letter-spacing: 0;
 user-select: text;
 max-width: 100%;
 display: inline-table;
-transition: 500ms all;
 }
 
 .code {
@@ -252,6 +259,7 @@ margin: 0 0 1rem;
 line-height: 1.4;
 white-space: pre;
 white-space: pre-wrap;
+transition: 500ms all;
 }
 
 pre .code {
@@ -353,7 +361,6 @@ position: fixed;
 top: 0;
 left: 0;
 padding: 8px;
-transition: all 500ms ease-in-out;
 }
 
 .scrolled, #menu:hover {
@@ -371,6 +378,7 @@ color: #000;
 background: var(--white);
 border-bottom-left-radius: 5px;
 box-shadow: none;
+transition: 500ms all;
 }
 
 #navbar {
@@ -405,6 +413,7 @@ padding: 0;
 display: block;
 color: var(--navbar-color);
 padding: 1.5rem;
+transition: 500ms all;
 }
 
 .header {
