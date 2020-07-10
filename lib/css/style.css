@@ -259,7 +259,6 @@ margin: 0 0 1rem;
 line-height: 1.4;
 white-space: pre;
 white-space: pre-wrap;
-transition: 500ms all;
 }
 
 pre .code {
@@ -267,6 +266,10 @@ padding: 10px;
 background-color: var(--eee);
 border-left: 3px solid var(--code);
 border-radius: 0px 4px 4px 0px;
+}
+
+pre * {
+transition: 500ms all;
 }
 
 .reserved {
@@ -354,7 +357,8 @@ opacity: 1;
 #menu {
 color: var(--text);
 width: 100%;
-background: var(--white);
+background-color: var(--white);
+transition: 500ms all;
 z-index: 999;
 cursor: pointer;
 position: fixed;
@@ -399,6 +403,7 @@ box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
 
 #navbar h1 {
 text-align: center;
+transition: inherit;
 }
 
 #navbar.open {
@@ -450,7 +455,6 @@ transition: 500ms all;
 footer section::after {
 background: none;
 }
-
 
 footer {
 text-align: center;
@@ -562,6 +566,11 @@ transform: rotateY(360deg);
 }
 }
 
+li, ul {
+list-style: none;
+padding-left: none;
+}
+
 .theme-switch, .switch {
 display: inline-block;
 height: 34px;
@@ -641,5 +650,4 @@ transition: 500ms all;
 
 .option-description {
 text-align: center;
-transition: 500ms all;
 }
