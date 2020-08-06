@@ -37,7 +37,7 @@ layout: "null"
 
 @font-face {
 font-family: Roboto-Thin;
-src: url('{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
+src: url('{{ site.url}}{{ site.baseurl }}/lib/fonts/roboto-thin.otf');
 }
 
 * {
@@ -49,7 +49,6 @@ font: inherit;
 vertical-align: baseline;
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
-transition: width 0.5s linear, color 0.5s linear 0.5s, background-color 0.5s linear, background 0.5s linear, opacity 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -88,6 +87,7 @@ display: flex;
 flex-direction: column;
 -webkit-animation: fade 0.5s ease-in;
 animation: fade 0.5s ease-in;
+transition: 500ms all;
 }
 
 @keyframes fade {
@@ -102,6 +102,7 @@ opacity: 1;
 footer {
 text-align: center;
 flex-shrink: 0;
+transition: 500ms all;
 }
 
 .no-js {
@@ -130,6 +131,7 @@ z-index: 999999;
 a {
 text-decoration: none;
 color: var(--text);
+transition: 500ms all;
 }
 
 .message {
@@ -147,6 +149,7 @@ display: flex;
 font-size: 144px;
 font-weight: 100;
 margin-bottom: 16px;
+transition: 500ms all;
 }
 
 @media (max-width: 300px) {
@@ -158,6 +161,7 @@ font-size: 60px;
 .message h2 {
 margin-bottom: 24px;
 word-break: break-word;
+transition: 500ms all;
 }
 
 .message h3 {
@@ -165,6 +169,7 @@ font-weight: 700;
 font-size: 16px;
 margin-bottom: 32px;
 word-break: break-word;
+transition: 500ms all;
 }
 
 .button {
@@ -181,7 +186,7 @@ color: var(--text);
 background: var(--button);
 text-decoration: none;
 border-radius: 4px;
-transition: all 0.5s;
+transition: 500ms all;
 }
 
 .button:hover {
@@ -199,7 +204,7 @@ top: 0;
 z-index: 10000;
 perspective: 1600px;
 perspective-origin: 20% 50%;
-transition: 0.5s all;
+transition: 500ms all;
 opacity: 1;
 }
 
@@ -245,6 +250,11 @@ display: inline-block;
 height: 34px;
 position: relative;
 width: 60px;
+}
+
+li, ul {
+list-style: none;
+padding: 0;
 }
 
 .switch input, .theme-switch input {
