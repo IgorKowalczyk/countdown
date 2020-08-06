@@ -3,8 +3,8 @@ layout: "default"
 ---
 <main id="main-doc">
 <section class="main-section">
-<h1 class="center">Countdown.js</h1>
-<p class="center">A simple and easy-to-use countdown script</p>
+--> # Countdown.js <--
+--> A simple and easy-to-use countdown script <--
 <div class="center-button">
 <a href="#Getting-Started" class="button">
 <svg height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
@@ -13,205 +13,97 @@ layout: "default"
 </section>
 <section id="Getting-Started" class="main-section">
 <header>
-<h1>Getting Started</h1>
-<p>Learn how to easily start using Countdown.js</p>
+# Getting Started
+Learn how to easily start using Countdown.js
 </header>
 <br>
-<h2>Download</h2>
-<p>Download Stable Version (<code class="code">v0.0.2</code>) [Recomended!].</p>
+## Download
+Download Stable Version (`v0.0.2`) [Recomended!].
 <p class="small">This version is stable, the configuration and other content will not be changed. It will always be compatible with your code.</p>
-<a href="./download/v0.0.2/countdown.min.js" target="_blank" class="button">Download v0.0.2</a>
+<a href="{{ site.baseurl }}/download/v0.0.2/countdown.min.js" target="_blank" class="button">Download v0.0.2</a>
 <br>
-<p>Download Unstable Version</p>
+Download Unstable Version
 <p class="small">This version is a developer version. It may contain bugs and is constantly being improved. Using it in production is not recommended.</p>
-<a href="./download/countdown.min.js" target="_blank" class="button">Download Unstable v0.0.2</a>
+<a href="{{ site.baseurl }}/download/countdown.min.js" target="_blank" class="button">Download Unstable v0.0.2</a>
 <br>
-<h2>Include scripts</h2>
-<p>It is possible to place one of two versions in the script - minified and unminified JS files.</p>
-<pre><div class="code html"><span class="operators">&lt;script</span>&nbsp;<span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span>&nbsp;<span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.min.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
-</div></pre>
+## Include scripts
+It is possible to place one of two versions in the script - minified and unminified JS files.
+```html
+<script type="text/javascript" src="js/countdown.min.js"></script>
+```
 <p>Or:</p>
-<pre><div class="code html"><span class="operators">&lt;script</span>&nbsp;<span class="attribute">type</span><span class="operators">=</span><span class="strings">"text/javascript"</span>&nbsp;<span class="attribute">src</span><span class="operators">=</span><span class="strings">"js/countdown.js"</span><span class="operators">&gt;</span><span class="reserved"><span class="operators">&lt;</span>/script<span class="operators">&gt;</span></span>
-</div></pre>
-<h2>Set end date</h2>
-<p>Choose a date that supports <code class="code">JavaScript</code> in whatever format you like.</p>
-<pre><div class="code javascript"><span class="reserved">var</span> endDate <span class="operators">=</span> <span class="strings">"2050/01/01"</span>;</div></pre>
+```html
+<script type="text/javascript" src="js/countdown.js"></script>
+```
+## Set end date
+Choose a date that supports `JavaScript` in whatever format you like.
+```javascript
+var endDate ="2050/01/01";
+```
 </section>
 <section id="Callback-parameters" class="main-section">
 <header>
-<h1>Callback parameters</h1>
-<p>The callback function has two parameters.</p>
+# Callback parameters
+The callback function has two parameters.
 </header>
 <p class="small">The first parameter contains the following calculations related to the countdown.</p>
-<table>
-<caption>Callback parameters</caption>
-<thead>
-<tr>
-<th scope="col">Parametrs</th>
-<th scope="col">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<code class="code">
-seconds
-</code>
-</td>
-<td>Seconds to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-minutes
-</code>
-</td>
-<td>Minutes to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-hours
-</code>
-</td>
-<td>Hours to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-days
-</code>
-</td>
-<td>Days to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-daysToWeek
-</code>
-</td>
-<td>Days to selected week.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-daysToMonth
-</code>
-</td>
-<td>Days to selected month.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-weeks
-</code>
-</td>
-<td>Weeks to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-weeksToMonth
-</code>
-</td>
-<td>Weeks to selected month.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-months
-</code>
-</td>
-<td>Months to selected date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-monthsToYear
-</code>
-</td>
-<td>Months to selected year.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-months
-</code>
-</td>
-<td>Months to selected date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-years
-</code>
-</td>
-<td>Years to selected date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-totalDays
-</code>
-</td>
-<td>Total days to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-totalHours
-</code>
-</td>
-<td>Total hours to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-totalMinutes
-</code>
-</td>
-<td>Total minutes to end date.</td>
-</tr>
-<tr>
-<td>
-<code class="code">
-totalSeconds
-</code>
-</td>
-<td>Total seconds to end date.</td>
-</tr>
-</tbody>
-</table>
+| **Parametrs** | **Description** |
+|---------------|-----------------|
+| `seconds` | Seconds to end date. |
+| `minutes` | Minutes to end date. |
+| `hours` | Hours to end date. |
+| `days` | Days to end date. |
+| `daysToWeek` | Days to selected week. |
+| `daysToMonth` | Days to selected month. |
+| `weeks` | Weeks to end date. |
+| `weeksToMonth` | Weeks to selected month. |
+| `months` | Months to selected date. |
+| `monthsToYear` | Months to selected year. |
+| `months` | Months to selected date. |
+| `years` | Years to selected date.  |
+| `totalDays` | Total days to end date. |
+| `totalHours` | Total hours to end date. |
+| `totalMinutes` | Total minutes to end date. |
+| `totalSeconds` | Total seconds to end date. |
 </section>
 <section id="Examples" class="main-section">
 <header>
-<h1>Examples</h1>
+# Examples
 </header>
-<h4>Example 1. - Simple</h4>
-<pre><div class="javascript code"><span class="reserved">var</span> counterElement <span class="operators">=</span> document.querySelector(<span class="strings">"#counter"</span>);<span class="comments"> // Select "p" with "counter" ID</span><br><span class="reserved">var</span> endDate <span class="operators">=</span> (<span class="reserved">new</span> Date().getFullYear() <span class="operators">+</span> <span class="numbers">1</span>) <span class="operators">+</span> <span class="strings">"/01/01"</span>;<span class="comments"> // Select date (Default javascript date format)</span><br><span class="reserved">var</span> myCountDown <span class="operators">=</span> <span class="reserved"> new</span> countdown(endDate, <span class="reserved">function</span>(remaining, finished) <span class="operators">{</span><span class="comments"> // Setup countdown</span><br><br><span class="reserved">var</span> message <span class="operators">=</span> <span class="strings">""</span>;<span class="comments"> // Default message</span>
-<br>
-  <span class="reserved">if</span> (finished) <span class="operators">{</span>
-    message <span class="operators">=</span> <span class="strings">"Expired"</span>;<span class="comments"> // Show text when expire</span>  <br>
-  <span class="operators">}  </span><span class="reserved">else</span><span class="operators">  {</span>
-    message <span class="operators">=</span> remaining.totalDays <span class="operators">+</span> <span class="strings">" d "</span>;<span class="comments"> // Else</span>
-    message <span class="operators">+=</span> remaining.minutes <span class="operators">+</span> <span class="strings">" m "</span>;<span class="comments"> // Else</span>
-    message <span class="operators">+=</span> remaining.seconds <span class="operators">+</span> <span class="strings">" s "</span>;<span class="comments"> // Else</span><br>  <span class="operators">}</span>
+#### Example 1. - Simple
+```javascript
+var counterElement = document.querySelector("#counter"); // Select "p" with "counter" ID
+var endDate = (new Date().getFullYear() +1) +"/01/01"; // Select date (Default javascript date format)
+var myCountDown = new countdown(endDate, function(remaining, finished) { // Setup countdown
 
-  counterElement.textContent <span class="operators">=</span> message;<span class="comments"> // Render message</span><br><span class="operators">});</span>
-</div></pre>
-<a href="./examples/simple" target="_blank" class="button">See Example</a>
+var message =""; // Default message
+
+  if (finished) {
+    message ="Expired"; // Show text when expire
+
+  }  else  {
+    message = remaining.totalDays +" d "; // Else
+    message += remaining.minutes +" m "; // Else
+    message += remaining.seconds +" s "; // Else
+  }
+
+  counterElement.textContent = message; // Render message
+});
+```
+<a href="{{ site.baseurl }}/examples/simple" target="_blank" class="button">See Example</a>
 <br>
-<h4>Example 2. - Static Date</h4>
-<pre><div class="javascript code"><span class="reserved">var</span> myCountDown <span class="operators">=</span>&nbsp;<span class="reserved">new</span> countdown(<span class="strings">"2050/01/01"</span>, <span class="reserved">function</span> (remaining, finished) <span class="operators">{</span><br><br><span class="reserved">if</span> (finished) <span class="operators">{</span>
+#### Example 2. - Static Date
+```javascript
+var myCountDown = new countdown("2050/01/01", function (remaining, finished) {
+
+if (finished) {
     
-    document.body.innerHTML <span class="operators">=</span> <span class="strings">"Expired"</span>;
+    document.body.innerHTML ="Expired";
 
-  <span class="operators">}</span>&nbsp;<span class="reserved">else</span>&nbsp;<span class="operators">{</span>
-document.body.innerHTML <span class="operators">=</span> remaining.hours <span class="operators">+</span> <span class="strings">"h "</span> <span class="operators">+</span> remaining.minutes <span class="operators">+</span> <span class="strings">"m "</span> <span class="operators">+</span> remaining.seconds <span class="operators">+</span> <span class="strings">"s"</span>;
+  } else {
+document.body.innerHTML = remaining.hours +"h "+ remaining.minutes +"m "+ remaining.seconds +"s";
 
-  <span class="operators">}</span>
-
-<span class="operators">});</span>
-</div></pre>
+  }});
+```
 </section>
 
