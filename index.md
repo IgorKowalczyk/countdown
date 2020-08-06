@@ -3,8 +3,8 @@ layout: "default"
 ---
 <main id="main-doc">
 <section class="main-section">
---> # Countdown.js <--
---> A simple and easy-to-use countdown script <--
+# Countdown.js
+A simple and easy-to-use countdown script
 <div class="center-button">
 <a href="#Getting-Started" class="button">
 <svg height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
@@ -47,6 +47,7 @@ var endDate ="2050/01/01";
 The callback function has two parameters.
 </header>
 <p class="small">The first parameter contains the following calculations related to the countdown.</p>
+
 | **Parametrs** | **Description** |
 |---------------|-----------------|
 | `seconds` | Seconds to end date. |
@@ -65,12 +66,14 @@ The callback function has two parameters.
 | `totalHours` | Total hours to end date. |
 | `totalMinutes` | Total minutes to end date. |
 | `totalSeconds` | Total seconds to end date. |
+
 </section>
 <section id="Examples" class="main-section">
 <header>
 # Examples
 </header>
 #### Example 1. - Simple
+
 ```javascript
 var counterElement = document.querySelector("#counter"); // Select "p" with "counter" ID
 var endDate = (new Date().getFullYear() +1) +"/01/01"; // Select date (Default javascript date format)
@@ -90,9 +93,11 @@ var message =""; // Default message
   counterElement.textContent = message; // Render message
 });
 ```
+
 <a href="{{ site.baseurl }}/examples/simple" target="_blank" class="button">See Example</a>
 <br>
 #### Example 2. - Static Date
+
 ```javascript
 var myCountDown = new countdown("2050/01/01", function (remaining, finished) {
 
@@ -105,5 +110,6 @@ document.body.innerHTML = remaining.hours +"h "+ remaining.minutes +"m "+ remain
 
   }});
 ```
+
 </section>
 
