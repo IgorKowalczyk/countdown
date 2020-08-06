@@ -71,6 +71,7 @@ The callback function has two parameters.
 <section id="Examples" class="main-section">
 <header>
 # Examples
+
 </header>
 #### Example 1. - Simple
 
