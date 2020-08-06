@@ -1,3 +1,6 @@
+---
+layout: "null"
+---
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
@@ -64,7 +67,7 @@
 
 @font-face {
 font-family: 'Montserrat';
-src: url(../fonts/montserrat-light.ttf);
+src: url('{{ site.baseurl }}/fonts/montserrat-light.ttf');
 }
 
 .no-js {
