@@ -1,6 +1,3 @@
----
-layout: "default"
----
 <main id="main-doc">
 <section class="main-section">
 # Countdown.js
