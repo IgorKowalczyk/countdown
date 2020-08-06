@@ -15,10 +15,12 @@ Learn how to easily start using Countdown.js
 ## Download
 Download Stable Version (`v0.0.2`) [Recomended!].
 This version is stable, the configuration and other content will not be changed. It will always be compatible with your code.
+
 [Download v0.0.2]({{ site.baseurl }}/download/v0.0.2/countdown.min.js)
 
 Download Unstable Version
 This version is a developer version. It may contain bugs and is constantly being improved. Using it in production is not recommended.
+
 [Download Unstable v0.0.2]({{ site.baseurl }}/download/countdown.min.js)
 
 ## Include scripts
