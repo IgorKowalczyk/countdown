@@ -1,7 +1,6 @@
 ---
 layout: "default"
 ---
-<main id="main-doc">
 <section class="main-section">
 # Countdown.js
 A simple and easy-to-use countdown script
