@@ -32,6 +32,7 @@ layout: "null"
 --scrollbar: #fff;
 --scrollbar-hover: #4a4a4a;
 --scrollbar-active: #383838;
+--code: #0000000d;
 }
 
 [data-theme="dark"] {
@@ -63,6 +64,7 @@ layout: "null"
 --preloader: #222;
 --spinner: #888;
 --spinner-border: #333;
+--code: #1b1b1b;
 }
 
 @font-face {
