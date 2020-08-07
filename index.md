@@ -1,7 +1,10 @@
 ---
 layout: "default"
 ---
+{:.center}
 # Countdown.js
+
+{:.center}
 A simple and easy-to-use countdown script
 <div class="center-button">
 <a href="#Getting-Started" class="button">
