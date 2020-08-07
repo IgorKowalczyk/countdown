@@ -608,7 +608,8 @@ transform: rotateY(360deg);
 
 li, ul {
 list-style: none;
-padding-left: none;
+padding-left: 0;
+margin-left: 0;
 }
 
 .theme-switch, .switch {
