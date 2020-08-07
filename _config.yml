@@ -4,6 +4,9 @@ title: "Countdown.js Docs"
 # Your name
 name: "Igor Kowalczyk"
 
+# Site version (used in "/download" dir)
+version: "v0.0.2"
+
 # Name of project
 project: "Countdown.js"
 

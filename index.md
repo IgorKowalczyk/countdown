@@ -16,15 +16,15 @@ A simple and easy-to-use countdown script
 Learn how to easily start using Countdown.js
 
 ## Download
-Download Stable Version (`v0.0.2`) [Recomended!].
+Download Stable Version (`{{ site.version }}`) [Recomended!].
 This version is stable, the configuration and other content will not be changed. It will always be compatible with your code.
 
-[Download v0.0.2]({{ site.baseurl }}/download/v0.0.2/countdown.min.js)
+<a href="{{ site.baseurl }}/download/{{ site.version }}/countdown.min.js" target="_blank" class="button">Download {{ site.version }}</a>
 
 Download Unstable Version
 This version is a developer version. It may contain bugs and is constantly being improved. Using it in production is not recommended.
 
-[Download Unstable v0.0.2]({{ site.baseurl }}/download/countdown.min.js)
+<a href="{{ site.baseurl }}/download/countdown.min.js" target="_blank" class="button">Download Unstable {{ site.version }}</a>
 
 ## Include scripts
 It is possible to place one of two versions in the script - minified and unminified JS files.
@@ -88,7 +88,7 @@ var message =""; // Default message
 });
 ```
 
-[See Example]({{ site.baseurl }}/examples/simple)
+<a href="{{ site.baseurl }}/examples/simple" target="_blank" class="button">See Example</a>
 #### Example 2. - Static Date
 
 ```javascript
