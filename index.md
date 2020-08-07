@@ -7,7 +7,7 @@ layout: "default"
 {:.center}
 A simple and easy-to-use countdown script
 <div class="center-button">
-<a href="#getting-Started" class="button">
+<a href="#getting-started" class="button">
 <svg height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
 </a>
 </div>
