@@ -302,7 +302,7 @@ padding: 10px;
 .highlight .ne { color: #990000; font-weight: bold; } /* Name.Exception */
 .highlight .nf { color: #990000; font-weight: bold; } /* Name.Function */
 .highlight .nn { color: #555555; } /* Name.Namespace */
-.highlight .nt { color: #000080; } /* Name.Tag */
+.highlight .nt { color: #0086b3; } /* Name.Tag */
 .highlight .nv { color: #008080; } /* Name.Variable */
 .highlight .ow { font-weight: bold; } /* Operator.Word */
 .highlight .w { color: #bbbbbb; } /* Text.Whitespace */
@@ -336,7 +336,6 @@ border-right: 1px solid #ccc;
 
 .highlight pre code {
 display: block;
-white-space: pre;
 overflow-x: auto;
 word-wrap: normal;
 }
