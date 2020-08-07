@@ -510,6 +510,10 @@ padding-right: 0;
 }
 }
 
+main {
+margin-top: 600px;
+}
+
 @media screen and (min-width: 800px) {
 body {
 margin-top: 0;
@@ -527,6 +531,10 @@ display: none;
 
 #menu {
 display: none;
+}
+
+#navbar h1 {
+font-size: 23px;
 }
 
 #navbar {
