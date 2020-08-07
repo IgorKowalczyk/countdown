@@ -21,6 +21,8 @@
 {% include seo.html %}
 {% if page.layout == '404' %}
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/css/404.min.css">
+{% else if page.layout == 'example' %}
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/css/example.min.css">
 {% else %}
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/css/style.min.css">
 {% endif %}
