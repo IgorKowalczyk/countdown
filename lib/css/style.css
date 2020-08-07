@@ -24,7 +24,6 @@ layout: "null"
 --navbar-hover: #fff;
 --navbar-selected: #fff;
 --navbar-color: #000;
---code: #00a3a3;
 --preloader: #fff;
 --spinner: #00a3a3;
 --spinner-border: #f3f3f3;
@@ -56,7 +55,6 @@ layout: "null"
 --navbar-hover: #fff;
 --navbar-selected: #fff;
 --navbar-color: #fff;
---code: #fff;
 --scrollbar: #222;
 --scrollbar-thumb: #2b2b2b;
 --scrollbar-hover: #363636;
@@ -244,7 +242,6 @@ line-height: 1.5em;
 font-size: 0.9em;
 border-radius: 3px;
 word-break: keep-all;
-transition: 500ms all;
 }
 
 .highlighter-rouge {
