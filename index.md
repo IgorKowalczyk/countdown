@@ -1,9 +1,6 @@
 ---
 layout: "default"
 ---
-
-<section class="main-section">
-
 {:.center}
 # Countdown.js
 
@@ -14,9 +11,6 @@ A simple and easy-to-use countdown script
 <svg height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
 </a>
 </div>
-
-</section>
-<section id="Getting-Started" class="main-section">
 
 # Getting Started
 Learn how to easily start using Countdown.js
@@ -47,9 +41,6 @@ Choose a date that supports `JavaScript` in whatever format you like.
 var endDate ="2050/01/01";
 ```
 
-</section>
-<section id="Callback-parameters" class="main-section">
-
 # Callback parameters
 The callback function has two parameters.
 The first parameter contains the following calculations related to the countdown.
@@ -72,9 +63,6 @@ The first parameter contains the following calculations related to the countdown
 | `totalHours` | Total hours to end date. |
 | `totalMinutes` | Total minutes to end date. |
 | `totalSeconds` | Total seconds to end date. |
-
-</section>
-<section id="Examples" class="main-section">
 
 # Examples
 
@@ -115,5 +103,3 @@ document.body.innerHTML = remaining.hours +"h "+ remaining.minutes +"m "+ remain
 
   }});
 ```
-
-</section>
