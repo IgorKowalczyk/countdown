@@ -514,6 +514,12 @@ main {
 margin-top: 60px;
 }
 
+@media screen and (max-width: 800px) {
+#navbar h1 {
+font-size: 23px;
+}
+}
+
 @media screen and (min-width: 800px) {
 body {
 margin-top: 0;
@@ -531,10 +537,6 @@ display: none;
 
 #menu {
 display: none;
-}
-
-#navbar h1 {
-font-size: 23px;
 }
 
 #navbar {
