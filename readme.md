@@ -4,7 +4,6 @@ A simple and easy-to-use countdown.
 [![Jekyll](https://github.com/igorkowalczyk/blog/workflows/Jekyll/badge.svg)](https://igorkowalczyk.github.io/countdown.js)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown.js?color=%2334D058&logo=github&logoColor=959DA5&labelColor=24292E)](https://igorkowalczyk.github.io/blog/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/countdown.js?color=%2334D058&logo=github&logoColor=959DA5&labelColor=24292E)](https://github.com/igorkowalczyk/blog/releases)
-[![Docs](http://inch-ci.org/github/igorkowalczyk/countdown.js.svg?branch=master)](https://igorkowalczyk.github.io/countdown.js)
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://discord.gg/f4KtqNB)
 
 
