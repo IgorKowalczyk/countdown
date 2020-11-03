@@ -19,12 +19,12 @@ Learn how to easily start using Countdown.js
 Download Stable Version (`{{ site.version }}`) [Recomended!].
 This version is stable, the configuration and other content will not be changed. It will always be compatible with your code.
 
-<a href="{{ site.baseurl }}/download/{{ site.version }}/countdown.min.js" target="_blank" class="button">Download {{ site.version }}</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/download/{{ site.version }}/countdown.min.js" target="_blank" class="button">Download {{ site.version }}</a>
 
 Download Unstable Version
 This version is a developer version. It may contain bugs and is constantly being improved. Using it in production is not recommended.
 
-<a href="{{ site.baseurl }}/download/countdown.min.js" target="_blank" class="button">Download Unstable {{ site.version }}</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/download/countdown.min.js" target="_blank" class="button">Download Unstable {{ site.version }}</a>
 
 ## Include scripts
 It is possible to place one of two versions in the script - minified and unminified JS files.
@@ -88,7 +88,7 @@ var message =""; // Default message
 });
 ```
 
-<a href="{{ site.baseurl }}/examples/simple" target="_blank" class="button">See Example</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/examples/simple" target="_blank" class="button">See Example</a>
 #### Example 2. - Static Date
 
 ```javascript
