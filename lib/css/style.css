@@ -67,7 +67,7 @@ layout: "null"
 
 @font-face {
 font-family: 'Montserrat';
-src: url('{{ site.baseurl }}/lib/fonts/montserrat-light.ttf');
+src: url('{{ site.url || site.host }}{{ site.baseurl }}/lib/fonts/montserrat-light.ttf');
 }
 
 .no-js {
