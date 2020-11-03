@@ -17,7 +17,7 @@ email: "xxmajonezxx@gmail.com"
 description: "Countdown.js - A simple and easy-to-use countdown"
 
 # Base url (Not link! Only dir, without slash at end)
-baseurl: ""
+baseurl: "countdown.js"
 url: "countdown.js"
 
 # Github username (no link) - if you don't have - leave blank
