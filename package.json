@@ -1,9 +1,10 @@
 {
- "name": "countdown.js",
+ "name": "@igorkowalczyk/countdown.js",
  "version": "0.0.1",
  "description": "A simple and easy-to-use countdown.",
  "author": "Igor Kowalczyk",
  "license": "MIT",
+ "repository": "igorkowalczyk/countdown.js",
  "main": "dist/index.js",
  "types": "dist/index.d.ts",
  "scripts": {
@@ -20,10 +21,6 @@
  },
  "dependencies": {
   "mitt": "^2.1.0"
- },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/countdown.js.git"
  },
  "bugs": {
   "url": "https://github.com/igorkowalczyk/countdown.js/issues"
