@@ -59,13 +59,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mitt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(858);
 /* harmony import */ var mitt__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mitt__WEBPACK_IMPORTED_MODULE_0__);
 
+/**
+ * Creates a new Timer
+ * @class Timer
+ */
 class Timer {
+    /**
+     * Creates a new timer
+     * @param {number} time
+     * @param {stopwatch} boolean
+     * @return {Timer}
+     */
     constructor({ interval = 1000, stopwatch = false } = {}) {
         this._duration = 0;
         this._endTime = 0;
         this._pauseTime = 0;
         this._status = "stopped";
         this._emitter = mitt__WEBPACK_IMPORTED_MODULE_0___default()();
+        /**
+         * @private
+         * @returns {object}
+         */
         this.tick = () => {
             if (this.status === "paused")
                 return;
@@ -81,6 +95,10 @@ class Timer {
         this._interval = interval;
         this._stopwatch = stopwatch;
     }
+    /**
+     * @function start
+     * @returns {object}
+     */
     start(duration, interval) {
         if (this.status !== "stopped")
             return;
@@ -93,17 +111,29 @@ class Timer {
         this._emitter.emit("tick", this._stopwatch ? 0 : this._duration);
         this._timeoutID = setInterval(this.tick, interval || this._interval);
     }
+    /**
+     * @function stop
+     * @returns {object}
+     */
     stop() {
         if (this._timeoutID)
             clearInterval(this._timeoutID);
         this._changeStatus("stopped");
     }
+    /**
+     * @function pause
+     * @returns {object}
+     */
     pause() {
         if (this.status !== "running")
             return;
         this._pauseTime = Date.now();
         this._changeStatus("paused");
     }
+    /**
+     * @function resume
+     * @returns {object}
+     */
     resume() {
         if (this.status !== "paused")
             return;
@@ -111,10 +141,18 @@ class Timer {
         this._pauseTime = 0;
         this._changeStatus("running");
     }
+    /**
+     * @private
+     * @returns {object}
+     */
     _changeStatus(status) {
         this._status = status;
         this._emitter.emit("statusChanged", this.status);
     }
+    /**
+     * @function time
+     * @returns {string}
+     */
     get time() {
         if (this.status === "stopped")
             return 0;
@@ -122,9 +160,17 @@ class Timer {
         const left = this._endTime - time;
         return this._stopwatch ? this._duration - left : left;
     }
+    /**
+     * @function duration
+     * @returns {string}
+     */
     get duration() {
         return this._duration;
     }
+    /**
+     * @function status
+     * @returns {string}
+     */
     get status() {
         return this._status;
     }
@@ -135,6 +181,9 @@ class Timer {
         this._emitter.off(eventName, handler);
     }
 }
+/**
+ @module Timer
+*/
 /* harmony default export */ __webpack_exports__["default"] = (Timer);
 
 

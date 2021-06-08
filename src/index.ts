@@ -26,7 +26,7 @@ class Timer {
   this._stopwatch = stopwatch;
  }
  /**
-  * @public
+  * @function start
   * @returns {object}
   */
  public start(duration: number, interval?: number) {
@@ -42,7 +42,7 @@ class Timer {
  }
 
  /**
-  * @public
+  * @function stop
   * @returns {object}
   */
  public stop() {
@@ -51,7 +51,7 @@ class Timer {
  }
 
  /**
-  * @public
+  * @function pause
   * @returns {object}
   */
  public pause() {
@@ -61,7 +61,7 @@ class Timer {
  }
 
  /**
-  * @public
+  * @function resume
   * @returns {object}
   */
  public resume() {
@@ -96,8 +96,7 @@ class Timer {
  };
 
  /**
-  * Returns the duration
-  * @public
+  * @function time
   * @returns {string}
   */
  get time() {
@@ -108,8 +107,7 @@ class Timer {
  }
 
  /**
-  * Returns the duration
-  * @public
+  * @function duration
   * @returns {string}
   */
  get duration() {
@@ -117,8 +115,7 @@ class Timer {
  }
 
  /**
-  * Returns the duration
-  * @public
+  * @function status
   * @returns {string}
   */
  get status() {

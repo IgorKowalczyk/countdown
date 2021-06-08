@@ -39,5 +39,11 @@
   "verbose": true,
   "encoding": "utf8"
  },
- "plugins": ["plugins/markdown"]
+ "plugins": ["plugins/markdown", "node_modules/better-docs/typescript"],
+ "tags": {
+  "allowUnknownTags": ["optional"]
+ },
+ "source": {
+  "includePattern": "\\.(jsx|js|ts|tsx)$"
+ }
 }

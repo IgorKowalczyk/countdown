@@ -11,12 +11,13 @@
   "format:check": "prettier --check .",
   "format": "prettier --write . --ignore-unknown",
   "build": "ncc build src/index.ts -o dist",
-  "docs": "jsdoc commands -r -d docs -c .jsdoc.json"
+  "docs": "jsdoc src -r -d docs -c .jsdoc.json"
  },
  "devDependencies": {
   "@types/node": "^14.14.22",
   "@types/tape": "^4.13.0",
   "@zeit/ncc": "^0.22.3",
+  "better-docs": "^2.3.2",
   "clean-jsdoc-theme": "^3.2.7",
   "jsdoc": "^3.6.7",
   "prettier": "^2.3.1",

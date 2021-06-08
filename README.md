@@ -22,7 +22,7 @@ Soon!
 - To build the script to `/dist` folder run `npm run build`
 
 ## Links
- - [Docs](https://igorkowalczyk.github.io/countdown.js) (Soon!)
+ - [Docs](https://igorkowalczyk.github.io/countdown.js)
  - [NPM Package](https://npmjs.org/package/@igorkowalczyk/countdown.js)
  - [Yarn Package](https://yarnpkg.com/package/@igorkowalczyk/countdown.js)
  - [Discord server](https://majoexe.herokuapp.com/server)
