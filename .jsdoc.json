@@ -1,43 +1,43 @@
 {
-  "opts": {
-   "template": "node_modules/clean-jsdoc-theme",
-   "theme_opts": {
-    "theme": "dark",
-    "title": "Countdown.js",
-    "footer": "Countdown by Igor Kowalczyk",
-    "meta": [
-     {
-      "name": "author",
-      "content": "Igor Kowalczyk"
-     },
-     {
-      "name": "description",
-      "content": "Countdown.js"
-     }
-    ],
-    "menu": [
-     {
-      "title": "Github",
-      "link": "https://github.com/igorkowalczyk/countdown.js",
-      "target": "_blank"
-     },
-     {
-      "title": "NPM",
-      "link": "https://npmjs.org/package/@igorkowalczyk/countdown.js",
-      "target": "_blank"
-     },
-     {
-      "title": "Yarn",
-      "link": "https://yarnpkg.com/package/@igorkowalczyk/countdown.js",
-      "target": "_blank"
-     }
-    ]
-   },
-   "readme": "./README.md",
-   "destination": "docs/",
-   "recurse": true,
-   "verbose": true,
-   "encoding": "utf8"
+ "opts": {
+  "template": "node_modules/clean-jsdoc-theme",
+  "theme_opts": {
+   "theme": "dark",
+   "title": "Countdown.js",
+   "footer": "Countdown by Igor Kowalczyk",
+   "meta": [
+    {
+     "name": "author",
+     "content": "Igor Kowalczyk"
+    },
+    {
+     "name": "description",
+     "content": "Countdown.js"
+    }
+   ],
+   "menu": [
+    {
+     "title": "Github",
+     "link": "https://github.com/igorkowalczyk/countdown.js",
+     "target": "_blank"
+    },
+    {
+     "title": "NPM",
+     "link": "https://npmjs.org/package/@igorkowalczyk/countdown.js",
+     "target": "_blank"
+    },
+    {
+     "title": "Yarn",
+     "link": "https://yarnpkg.com/package/@igorkowalczyk/countdown.js",
+     "target": "_blank"
+    }
+   ]
   },
-  "plugins": ["plugins/markdown"]
- }
+  "readme": "./README.md",
+  "destination": "docs/",
+  "recurse": true,
+  "verbose": true,
+  "encoding": "utf8"
+ },
+ "plugins": ["plugins/markdown"]
+}
