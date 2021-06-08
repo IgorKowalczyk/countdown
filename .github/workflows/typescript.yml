@@ -23,8 +23,6 @@ jobs:
         uses: denoland/setup-deno@4a4e59637fa62bd6c086a216c7e4c5b457ea9e79
         with:
          deno-version: ${{ matrix.deno }} 
-      - name: ✨ Run linter
-        run: deno lint
 
       - name: ✨ Cache dependencies
         run: deno cache deps.ts
