@@ -38,3 +38,6 @@ When submitting a pull request:
 
 ## License
 This project is licensed under the MIT. See the [LICENSE](https://github.com/igorkowalczyk/countdown.js/blob/master/license.txt) file for details
+
+--- 
+> Note: This is my first TypeScript project
