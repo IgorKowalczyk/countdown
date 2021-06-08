@@ -15,11 +15,21 @@ or<br>
 
 ## Example usage
 ```js
-Soon!
+const Timer = require('@igorkowalczyk/countdown.js')
+const timer = new Timer()
+
+timer.on('tick', (ms) => console.log('tick', ms))
+timer.on('done', () => console.log('done!'))
+timer.on('statusChanged', (status) => console.log('status:', status))
+
+timer.start(20000) // Timer for 20s
 ```
 
 ## Build
-- To build the script to `/dist` folder run `npm run build`
+#### Package
+ - To build the script to `/dist` folder run `npm run build`
+#### Docs
+ - To build the dosc please run `npm run docs`
 
 ## Links
  - [Docs](https://igorkowalczyk.github.io/countdown.js)
