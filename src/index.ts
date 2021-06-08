@@ -15,12 +15,20 @@ class Timer {
  private _status: status = "stopped";
  private _timeoutID?: NodeJS.Timeout;
  private _emitter = mitt();
-
+ /**
+  * Creates a new timer
+  * @param {number} time
+  * @param {stopwatch} boolean
+  * @return {Timer}
+  */
  constructor({ interval = 1000, stopwatch = false } = {}) {
   this._interval = interval;
   this._stopwatch = stopwatch;
  }
-
+ /**
+  * @public
+  * @returns {object}
+  */
  public start(duration: number, interval?: number) {
   if (this.status !== "stopped") return;
   if (!duration) {
@@ -33,17 +41,29 @@ class Timer {
   this._timeoutID = setInterval(this.tick, interval || this._interval);
  }
 
+ /**
+  * @public
+  * @returns {object}
+  */
  public stop() {
   if (this._timeoutID) clearInterval(this._timeoutID);
   this._changeStatus("stopped");
  }
 
+ /**
+  * @public
+  * @returns {object}
+  */
  public pause() {
   if (this.status !== "running") return;
   this._pauseTime = Date.now();
   this._changeStatus("paused");
  }
 
+ /**
+  * @public
+  * @returns {object}
+  */
  public resume() {
   if (this.status !== "paused") return;
   this._endTime += Date.now() - this._pauseTime;
@@ -51,11 +71,19 @@ class Timer {
   this._changeStatus("running");
  }
 
+ /**
+  * @private
+  * @returns {object}
+  */
  private _changeStatus(status: status) {
   this._status = status;
   this._emitter.emit("statusChanged", this.status);
  }
 
+ /**
+  * @private
+  * @returns {object}
+  */
  private tick = () => {
   if (this.status === "paused") return;
   if (Date.now() >= this._endTime) {
@@ -67,30 +95,33 @@ class Timer {
   }
  };
 
+ /**
+  * Returns the duration
+  * @public
+  * @returns {string}
+  */
  get time() {
-  /**
-   * Returns the current time
-   * @returns {string}
-   */
   if (this.status === "stopped") return 0;
   const time = this.status === "paused" ? this._pauseTime : Date.now();
   const left = this._endTime - time;
   return this._stopwatch ? this._duration - left : left;
  }
 
+ /**
+  * Returns the duration
+  * @public
+  * @returns {string}
+  */
  get duration() {
-  /**
-   * Returns the duration
-   * @returns {number}
-   */
   return this._duration;
  }
 
+ /**
+  * Returns the duration
+  * @public
+  * @returns {string}
+  */
  get status() {
-  /**
-   * Returns the status
-   * @returns {status}
-   */
   return this._status;
  }
 
