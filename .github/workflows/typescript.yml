@@ -7,24 +7,11 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  build:
     name: ✨ Run Typescript
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        deno: ["v1.x", "canary"]
-        os: [macOS-latest, windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - name: ✨ Setup repo
         uses: actions/checkout@v2
-
-      - name: ✨ Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@4a4e59637fa62bd6c086a216c7e4c5b457ea9e79
-        with:
-         deno-version: ${{ matrix.deno }} 
-
-      - name: ✨ Cache dependencies
-        run: deno cache src/index.ts
-      - name: ✨ Run tests
-        run: deno test -A --unstable
+      - name: ✨ Build
+        run: npm run build
