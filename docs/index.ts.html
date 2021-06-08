@@ -87,7 +87,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Countdown.js</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><ul><li class="menu-li"><a href='https://github.com/igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Github</a></li><li class="menu-li"><a href='https://npmjs.org/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>NPM</a></li><li class="menu-li"><a href='https://yarnpkg.com/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Yarn</a></li></ul><div class="accordion collapsed" id="3513055" > <h3 class="accordion-heading">Classes<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="Timer.html">Timer</a></li></ul> </div><div class="accordion collapsed" id="3616132" > <h3 class="accordion-heading">Modules<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="module-Timer.html">Timer</a></li></ul> </div><div class="accordion collapsed" id="6534331" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#duration">duration</a></li><li class="accordion-list" id=""><a href="global.html#pause">pause</a></li><li class="accordion-list" id=""><a href="global.html#resume">resume</a></li><li class="accordion-list" id=""><a href="global.html#start">start</a></li><li class="accordion-list" id=""><a href="global.html#status">status</a></li><li class="accordion-list" id=""><a href="global.html#stop">stop</a></li><li class="accordion-list" id=""><a href="global.html#time">time</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Countdown.js</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><ul><li class="menu-li"><a href='https://github.com/igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Github</a></li><li class="menu-li"><a href='https://npmjs.org/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>NPM</a></li><li class="menu-li"><a href='https://yarnpkg.com/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Yarn</a></li></ul><div class="accordion collapsed" id="7917426" > <h3 class="accordion-heading">Classes<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="Timer.html">Timer</a></li></ul> </div><div class="accordion collapsed" id="1613368" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#duration">duration</a></li><li class="accordion-list" id=""><a href="global.html#pause">pause</a></li><li class="accordion-list" id=""><a href="global.html#resume">resume</a></li><li class="accordion-list" id=""><a href="global.html#start">start</a></li><li class="accordion-list" id=""><a href="global.html#status">status</a></li><li class="accordion-list" id=""><a href="global.html#stop">stop</a></li><li class="accordion-list" id=""><a href="global.html#time">time</a></li></ul> </div></div>
       
 
     </nav>
@@ -117,10 +117,6 @@
 
 /* Status type */
 type status = "running" | "paused" | "stopped";
-/**
- * Creates a new Timer
- * @class Timer
- */
 class Timer {
  private _interval: number;
  private _stopwatch: boolean;
@@ -132,8 +128,12 @@ class Timer {
  private _emitter = mitt();
  /**
   * Creates a new timer
-  * @param {number} time
-  * @param {stopwatch} boolean
+  * @constructor
+  * @param {number} [time=1000] Set the tics for the timer
+  * @param {boolean} [stopwatch=false] Set the stopwatch module
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
   * @return {Timer}
   */
  constructor({ interval = 1000, stopwatch = false } = {}) {
@@ -142,6 +142,10 @@ class Timer {
  }
  /**
   * @function start
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.start(duration [, interval])
   * @returns {object}
   */
  public start(duration: number, interval?: number) {
@@ -158,6 +162,10 @@ class Timer {
 
  /**
   * @function stop
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.stop()
   * @returns {object}
   */
  public stop() {
@@ -167,6 +175,10 @@ class Timer {
 
  /**
   * @function pause
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.pause()
   * @returns {object}
   */
  public pause() {
@@ -177,6 +189,10 @@ class Timer {
 
  /**
   * @function resume
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.resume()
   * @returns {object}
   */
  public resume() {
@@ -212,6 +228,10 @@ class Timer {
 
  /**
   * @function time
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.time() // Returns current time in ms
   * @returns {string}
   */
  get time() {
@@ -223,6 +243,10 @@ class Timer {
 
  /**
   * @function duration
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.duration() // Return the total duration of the timer in ms
   * @returns {string}
   */
  get duration() {
@@ -231,6 +255,10 @@ class Timer {
 
  /**
   * @function status
+  * @example
+  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const timer = new Timer()
+  * timer.status() // return running, paused or stopped
   * @returns {string}
   */
  get status() {
@@ -246,9 +274,6 @@ class Timer {
  }
 }
 
-/**
- @module Timer
-*/
 export default Timer;
 </code></pre>
         </article>
@@ -275,7 +300,7 @@ export default Timer;
       <script src="scripts/search.js"></script>
       <script src="scripts/third-party/fuse.js"></script>
       <script>
-        var list = [{"title":"Timer","link":"<a href=\"Timer.html\">Timer</a>"},{"title":"Timer","link":"<a href=\"module-Timer.html\">Timer</a>"},{"title":"duration","link":"<a href=\"global.html#duration\">duration</a>"},{"title":"pause","link":"<a href=\"global.html#pause\">pause</a>"},{"title":"resume","link":"<a href=\"global.html#resume\">resume</a>"},{"title":"start","link":"<a href=\"global.html#start\">start</a>"},{"title":"status","link":"<a href=\"global.html#status\">status</a>"},{"title":"stop","link":"<a href=\"global.html#stop\">stop</a>"},{"title":"time","link":"<a href=\"global.html#time\">time</a>"}];
+        var list = [{"title":"Timer","link":"<a href=\"Timer.html\">Timer</a>"},{"title":"duration","link":"<a href=\"global.html#duration\">duration</a>"},{"title":"pause","link":"<a href=\"global.html#pause\">pause</a>"},{"title":"resume","link":"<a href=\"global.html#resume\">resume</a>"},{"title":"start","link":"<a href=\"global.html#start\">start</a>"},{"title":"status","link":"<a href=\"global.html#status\">status</a>"},{"title":"stop","link":"<a href=\"global.html#stop\">stop</a>"},{"title":"time","link":"<a href=\"global.html#time\">time</a>"}];
         var options = 
           setupSearch(list, options)
       </script>
