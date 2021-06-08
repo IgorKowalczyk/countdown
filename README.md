@@ -1,8 +1,6 @@
 # Countdown.js
 Typescript countdown & stopwatch script.
 
-`npm install @igorkowalczyk/countdown.js`
-
 [![Jekyll](https://img.shields.io/github/workflow/status/igorkowalczyk/countdown.js/typescript?style=flat-square&logo=github&color=%2334D058)](https://igorkowalczyk.github.io/countdown.js)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown.js?color=%2334D058&logo=github&style=flat-square)](https://igorkowalczyk.github.io/countdown.js/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/countdown.js?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/countdown.js/releases)
