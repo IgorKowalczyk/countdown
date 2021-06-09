@@ -1,14 +1,14 @@
 {
- "name": "@igorkowalczyk/countdown.js",
+ "name": "@igorkowalczyk/countdown",
  "version": "0.0.3",
  "description": "A simple and easy-to-use countdown.",
  "author": "Igor Kowalczyk",
  "license": "MIT",
- "repository": "igorkowalczyk/countdown.js",
+ "repository": "igorkowalczyk/countdown",
  "source": "src/index.ts",
- "main": "dist/countdown.js.js",
+ "main": "dist/countdown.js",
  "types": "dist/index.d.ts",
- "module": "dist/countdown.js.module.js",
+ "module": "dist/countdown.module.js",
  "scripts": {
   "format:check": "prettier --check .",
   "format": "prettier --write . --ignore-unknown",
@@ -30,7 +30,7 @@
   "mitt": "^2.1.0"
  },
  "bugs": {
-  "url": "https://github.com/igorkowalczyk/countdown.js/issues"
+  "url": "https://github.com/igorkowalczyk/countdown/issues"
  },
- "homepage": "https://igorkowalczyk.github.io/countdown.js"
+ "homepage": "https://igorkowalczyk.github.io/countdown"
 }
