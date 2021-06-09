@@ -1,10 +1,10 @@
 {
- "name": "@igorkowalczyk/countdown",
+ "name": "@igorkowalczyk/countdown.js",
  "version": "0.0.4",
  "description": "A simple and easy-to-use countdown.",
  "author": "Igor Kowalczyk",
  "license": "MIT",
- "repository": "igorkowalczyk/countdown",
+ "repository": "igorkowalczyk/countdown.js",
  "source": "src/index.ts",
  "main": "dist/countdown.js",
  "types": "dist/index.d.ts",
