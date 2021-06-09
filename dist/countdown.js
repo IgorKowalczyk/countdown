@@ -1,4 +1,8 @@
-import mitt from 'mitt';
+var mitt = require('mitt');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var mitt__default = /*#__PURE__*/_interopDefaultLegacy(mitt);
 
 class Timer {
   /**
@@ -7,7 +11,7 @@ class Timer {
    * @param {number} [time=1000] Set the tics for the timer
    * @param {boolean} [stopwatch=false] Set the stopwatch module
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * @return {Timer}
    */
@@ -22,7 +26,7 @@ class Timer {
     this._pauseTime = 0;
     this._status = "stopped";
     this._timeoutID = void 0;
-    this._emitter = mitt();
+    this._emitter = mitt__default['default']();
 
     this.tick = () => {
       if (this.status === "paused") return;
@@ -44,7 +48,7 @@ class Timer {
   /**
    * @function start
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.start(duration [, interval])
    * @returns {object}
@@ -70,7 +74,7 @@ class Timer {
   /**
    * @function stop
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.stop()
    * @returns {object}
@@ -85,7 +89,7 @@ class Timer {
   /**
    * @function pause
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.pause()
    * @returns {object}
@@ -101,7 +105,7 @@ class Timer {
   /**
    * @function resume
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.resume()
    * @returns {object}
@@ -135,7 +139,7 @@ class Timer {
   /**
    * @function time
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.time() // Returns current time in ms
    * @returns {string}
@@ -149,7 +153,7 @@ class Timer {
   /**
    * @function duration
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.duration() // Return the total duration of the timer in ms
    * @returns {string}
@@ -162,7 +166,7 @@ class Timer {
   /**
    * @function status
    * @example
-   * const Timer = require('@igorkowalczyk/countdown.js')
+   * const Timer = require('@igorkowalczyk/countdown')
    * const timer = new Timer()
    * timer.status() // return running, paused or stopped
    * @returns {string}
@@ -183,5 +187,5 @@ class Timer {
 
 }
 
-export default Timer;
-//# sourceMappingURL=countdown.js.js.module.js.map
+module.exports = Timer;
+//# sourceMappingURL=countdown.js.map
