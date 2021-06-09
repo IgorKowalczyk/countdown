@@ -5,12 +5,14 @@
  "author": "Igor Kowalczyk",
  "license": "MIT",
  "repository": "igorkowalczyk/countdown.js",
+ "source": "src/index.ts",
  "main": "dist/index.js",
+ "module": "dist/index.module.js",
  "types": "dist/index.d.ts",
  "scripts": {
   "format:check": "prettier --check .",
   "format": "prettier --write . --ignore-unknown",
-  "build": "microbundle src -o dist",
+  "build": "microbundle -o dist --target=node --format=es,cjs",
   "docs": "jsdoc src/index.ts -r -d docs -c .jsdoc.json"
  },
  "devDependencies": {
