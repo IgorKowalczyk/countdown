@@ -1,9 +1,5 @@
 import { EventType, Handler } from "mitt";
 declare type status = "running" | "paused" | "stopped";
-/**
- * Creates a new Timer
- * @class Timer
- */
 declare class Timer {
     private _interval;
     private _stopwatch;
@@ -15,8 +11,12 @@ declare class Timer {
     private _emitter;
     /**
      * Creates a new timer
-     * @param {number} time
-     * @param {stopwatch} boolean
+     * @constructor
+     * @param {number} [time=1000] Set the tics for the timer
+     * @param {boolean} [stopwatch=false] Set the stopwatch module
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
      * @return {Timer}
      */
     constructor({ interval, stopwatch }?: {
@@ -25,21 +25,37 @@ declare class Timer {
     });
     /**
      * @function start
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.start(duration [, interval])
      * @returns {object}
      */
     start(duration: number, interval?: number): void;
     /**
      * @function stop
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.stop()
      * @returns {object}
      */
     stop(): void;
     /**
      * @function pause
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.pause()
      * @returns {object}
      */
     pause(): void;
     /**
      * @function resume
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.resume()
      * @returns {object}
      */
     resume(): void;
@@ -55,23 +71,32 @@ declare class Timer {
     private tick;
     /**
      * @function time
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.time() // Returns current time in ms
      * @returns {string}
      */
     get time(): number;
     /**
      * @function duration
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.duration() // Return the total duration of the timer in ms
      * @returns {string}
      */
     get duration(): number;
     /**
      * @function status
+     * @example
+     * const Timer = require('@igorkowalczyk/countdown.js')
+     * const timer = new Timer()
+     * timer.status() // return running, paused or stopped
      * @returns {string}
      */
     get status(): status;
     on(eventName: EventType, handler: Handler<any>): void;
     off(eventName: EventType, handler: Handler<any>): void;
 }
-/**
- @module Timer
-*/
 export default Timer;
