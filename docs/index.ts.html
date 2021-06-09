@@ -87,7 +87,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Countdown.js</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><ul><li class="menu-li"><a href='https://github.com/igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Github</a></li><li class="menu-li"><a href='https://npmjs.org/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>NPM</a></li><li class="menu-li"><a href='https://yarnpkg.com/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Yarn</a></li></ul><div class="accordion collapsed" id="56398" > <h3 class="accordion-heading">Classes<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="Timer.html">Timer</a></li></ul> </div><div class="accordion collapsed" id="2982827" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#duration">duration</a></li><li class="accordion-list" id=""><a href="global.html#pause">pause</a></li><li class="accordion-list" id=""><a href="global.html#resume">resume</a></li><li class="accordion-list" id=""><a href="global.html#start">start</a></li><li class="accordion-list" id=""><a href="global.html#status">status</a></li><li class="accordion-list" id=""><a href="global.html#stop">stop</a></li><li class="accordion-list" id=""><a href="global.html#time">time</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Countdown.js</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><ul><li class="menu-li"><a href='https://github.com/igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Github</a></li><li class="menu-li"><a href='https://npmjs.org/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>NPM</a></li><li class="menu-li"><a href='https://yarnpkg.com/package/@igorkowalczyk/countdown.js' class=' menu-link' id='' target='_blank'>Yarn</a></li></ul><div class="accordion collapsed" id="6792191" > <h3 class="accordion-heading">Classes<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="Timer.html">Timer</a></li></ul> </div><div class="accordion collapsed" id="3332187" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#duration">duration</a></li><li class="accordion-list" id=""><a href="global.html#pause">pause</a></li><li class="accordion-list" id=""><a href="global.html#resume">resume</a></li><li class="accordion-list" id=""><a href="global.html#start">start</a></li><li class="accordion-list" id=""><a href="global.html#status">status</a></li><li class="accordion-list" id=""><a href="global.html#stop">stop</a></li><li class="accordion-list" id=""><a href="global.html#time">time</a></li></ul> </div></div>
       
 
     </nav>
@@ -132,7 +132,7 @@ class Timer {
   * @param {number} [time=1000] Set the tics for the timer
   * @param {boolean} [stopwatch=false] Set the stopwatch module
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * @return {Timer}
   */
@@ -143,7 +143,7 @@ class Timer {
  /**
   * @function start
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.start(duration [, interval])
   * @returns {object}
@@ -163,7 +163,7 @@ class Timer {
  /**
   * @function stop
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.stop()
   * @returns {object}
@@ -176,7 +176,7 @@ class Timer {
  /**
   * @function pause
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.pause()
   * @returns {object}
@@ -190,7 +190,7 @@ class Timer {
  /**
   * @function resume
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.resume()
   * @returns {object}
@@ -229,7 +229,7 @@ class Timer {
  /**
   * @function time
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.time() // Returns current time in ms
   * @returns {string}
@@ -244,7 +244,7 @@ class Timer {
  /**
   * @function duration
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.duration() // Return the total duration of the timer in ms
   * @returns {string}
@@ -256,7 +256,7 @@ class Timer {
  /**
   * @function status
   * @example
-  * const Timer = require('@igorkowalczyk/countdown.js')
+  * const Timer = require('@igorkowalczyk/countdown')
   * const timer = new Timer()
   * timer.status() // return running, paused or stopped
   * @returns {string}
