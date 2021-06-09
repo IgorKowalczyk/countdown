@@ -1,15 +1,13 @@
 # Countdown.js
 Typescript countdown & stopwatch script.
 
-> Note: The package has been renamed from `countdown.js` to `countdown`! Some links may return 404, i'm working to fix that (now you can't download the package from eg. npm source)
-
 [![Jekyll](https://img.shields.io/github/workflow/status/igorkowalczyk/countdown/typescript?style=flat-square&logo=github&color=%2334D058)](https://igorkowalczyk.github.io/countdown)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://igorkowalczyk.github.io/countdown/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/countdown/releases)
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://igorkowalczyk.github.io/majobot/server)
 
 ## Install
-**Node.js 10x or newer is required!**<br>
+**Node.js 6x or newer is required!**<br>
 To install the package (latest version) run<br>
 `npm install @igorkowalczyk/countdown` [[NPM](https://npmjs.org/package/@igorkowalczyk/countdown)]<br>
 or<br>
