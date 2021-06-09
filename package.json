@@ -4,7 +4,13 @@
  "description": "A simple and easy-to-use countdown.",
  "author": "Igor Kowalczyk",
  "license": "MIT",
- "repository": "igorkowalczyk/countdown.js",
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/igorkowalczyk/countdown.js"
+ },
+ "publishConfig": {
+  "registry": "https://npm.pkg.github.com/igorkowalczyk"
+ },
  "source": "src/index.ts",
  "main": "dist/countdown.js",
  "types": "dist/index.d.ts",
@@ -28,9 +34,6 @@
  },
  "dependencies": {
   "mitt": "^2.1.0"
- },
- "publishConfig": {
-  "registry": "https://npm.pkg.github.com/igorkowalczyk"
  },
  "bugs": {
   "url": "https://github.com/igorkowalczyk/countdown/issues"
