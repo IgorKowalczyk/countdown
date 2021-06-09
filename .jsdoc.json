@@ -3,7 +3,7 @@
   "template": "node_modules/clean-jsdoc-theme",
   "theme_opts": {
    "theme": "dark",
-   "title": "Countdown.js",
+   "title": "Countdown",
    "footer": "Countdown by Igor Kowalczyk",
    "meta": [
     {
@@ -12,23 +12,23 @@
     },
     {
      "name": "description",
-     "content": "Countdown.js"
+     "content": "Countdown"
     }
    ],
    "menu": [
     {
      "title": "Github",
-     "link": "https://github.com/igorkowalczyk/countdown.js",
+     "link": "https://github.com/igorkowalczyk/countdown",
      "target": "_blank"
     },
     {
      "title": "NPM",
-     "link": "https://npmjs.org/package/@igorkowalczyk/countdown.js",
+     "link": "https://npmjs.org/package/@igorkowalczyk/countdown",
      "target": "_blank"
     },
     {
      "title": "Yarn",
-     "link": "https://yarnpkg.com/package/@igorkowalczyk/countdown.js",
+     "link": "https://yarnpkg.com/package/@igorkowalczyk/countdown",
      "target": "_blank"
     }
    ]
