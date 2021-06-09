@@ -7,6 +7,7 @@
  "repository": "igorkowalczyk/countdown.js",
  "source": "src/index.ts",
  "main": "dist/countdown.js.js",
+ "types": "dist/index.d.ts",
  "module": "dist/countdown.js.module.js",
  "scripts": {
   "format:check": "prettier --check .",
