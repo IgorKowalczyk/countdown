@@ -184,4 +184,4 @@ class Timer {
 }
 
 export default Timer;
-//# sourceMappingURL=countdown.js.module.js.map
+//# sourceMappingURL=countdown.js.js.module.js.map
