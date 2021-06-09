@@ -29,6 +29,9 @@
  "dependencies": {
   "mitt": "^2.1.0"
  },
+ "publishConfig": {
+  "registry": "https://npm.pkg.github.com/igorkowalczyk"
+ },
  "bugs": {
   "url": "https://github.com/igorkowalczyk/countdown/issues"
  },
