@@ -11,7 +11,7 @@
  "scripts": {
   "format:check": "prettier --check .",
   "format": "prettier --write . --ignore-unknown",
-  "build": "rimraf dist/* &&  microbundle -o dist --target=node --format=es,cjs",
+  "build": "rimraf dist/* &&  microbundle -o dist --target=node --format=es,cjs --generateTypes",
   "docs": "jsdoc src/index.ts -r -d docs -c .jsdoc.json"
  },
  "devDependencies": {
