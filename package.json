@@ -35,5 +35,14 @@
  "bugs": {
   "url": "https://github.com/igorkowalczyk/countdown/issues"
  },
- "homepage": "https://igorkowalczyk.github.io/countdown"
+ "homepage": "https://igorkowalczyk.github.io/countdown",
+ "keywords": [
+  "countdown",
+  "stopwatch",
+  "timer",
+  "time",
+  "date",
+  "javascript",
+  "typescript"
+ ]
 }
