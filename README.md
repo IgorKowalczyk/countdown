@@ -1,5 +1,5 @@
 # Countdown.js
-Typescript countdown & stopwatch script.
+Deadly simple countdown & stopwatch written in Typescript.
 
 [![Typescript](https://img.shields.io/github/workflow/status/igorkowalczyk/countdown/Typescript?style=flat-square&logo=github&color=%2334D058)](https://igorkowalczyk.github.io/countdown)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://igorkowalczyk.github.io/countdown/license.txt)
