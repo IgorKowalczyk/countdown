@@ -45,5 +45,11 @@
  },
  "source": {
   "includePattern": "\\.(jsx|js|ts|tsx)$"
- }
+ },
+ "resizeable": {
+  "navbar": {
+    "min": "300",
+    "max": "600"
+  }
+}
 }
