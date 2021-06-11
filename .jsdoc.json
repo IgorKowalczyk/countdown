@@ -31,7 +31,13 @@
      "link": "https://yarnpkg.com/package/@igorkowalczyk/countdown",
      "target": "_blank"
     }
-   ]
+   ],
+    "resizeable": {
+  "navbar": {
+   "min": "300",
+   "max": "600"
+  }
+ }
   },
   "readme": "./README.md",
   "destination": "docs/",
@@ -45,11 +51,5 @@
  },
  "source": {
   "includePattern": "\\.(jsx|js|ts|tsx)$"
- },
- "resizeable": {
-  "navbar": {
-   "min": "300",
-   "max": "600"
-  }
  }
 }
