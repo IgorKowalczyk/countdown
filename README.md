@@ -4,7 +4,9 @@ Deadly simple countdown & stopwatch written in Typescript.
 [![Typescript](https://img.shields.io/github/workflow/status/igorkowalczyk/countdown/Typescript?style=flat-square&logo=github&color=%2334D058)](https://igorkowalczyk.github.io/countdown)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://igorkowalczyk.github.io/countdown/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/countdown/releases)
+[![NPM Downloads](https://img.shields.io/npm/dt/@igorkowalczyk/countdown?style=flat-square&logo=npm&color=%2334D058)](https://npmjs.org/package/@igorkowalczyk/countdown)
 [![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://majoexe.herokuapp.com/server)
+
 
 ## Install
 **Node.js 6x or newer is required!**<br>
