@@ -32,12 +32,12 @@
      "target": "_blank"
     }
    ],
-    "resizeable": {
-  "navbar": {
-   "min": "300",
-   "max": "600"
-  }
- }
+   "resizeable": {
+    "navbar": {
+     "min": "300",
+     "max": "600"
+    }
+   }
   },
   "readme": "./README.md",
   "destination": "docs/",
