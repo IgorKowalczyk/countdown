@@ -44,7 +44,7 @@ timer.start(20000) // Timer for 20s
  - [Docs](https://igorkowalczyk.github.io/countdown)
  - [NPM Package](https://npmjs.org/package/@igorkowalczyk/countdown)
  - [Yarn Package](https://yarnpkg.com/package/@igorkowalczyk/countdown)
- - [Discord server](https://majoexe.herokuapp.com/server)
+ - [Discord server](https://redirect-majoexe.herokuapp.com/majo-v12)
 
 ## Issues
 If you have any issues with this package please create [new issue here](https://github.com/igorkowalczyk/countdown/issues)
