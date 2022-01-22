@@ -5,7 +5,7 @@ Deadly simple countdown & stopwatch written in Typescript.
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://igorkowalczyk.github.io/countdown/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/countdown/releases)
 [![NPM Downloads](https://img.shields.io/npm/dt/@igorkowalczyk/countdown?style=flat-square&logo=npm&color=%2334D058)](https://npmjs.org/package/@igorkowalczyk/countdown)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://majobot.igorkowalczyk.repl.co/server)
+[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&style=flat-square&logoColor=7289da)](https://igorkowalczyk.github.io/r/discord-server)
 
 
 ## Install
