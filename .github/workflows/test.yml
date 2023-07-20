@@ -29,5 +29,5 @@ jobs:
       cache: "pnpm"
    - name: 🚀 Install dependencies
      run: pnpm install
-   - name: 🚀 Format check
+   - name: 🚀 Run tests (Node ${{matrix.node}})
      run: "pnpm run test"
