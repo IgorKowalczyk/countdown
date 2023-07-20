@@ -1,7 +1,7 @@
 {
   "name": "@igorkowalczyk/countdown",
   "description": "Fast, accurate and lightweight countdown & stopwatch written in Typescript.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Igor Kowalczyk",
   "license": "MIT",
   "repository": "IgorKowalczyk/countdown",
