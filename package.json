@@ -18,7 +18,7 @@
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "test": "jest "
+    "test": "jest"
   },
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "1.5.3",
