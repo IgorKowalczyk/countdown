@@ -1,20 +1,17 @@
 {
   "name": "@igorkowalczyk/countdown",
-  "version": "1.0.0",
   "description": "Fast, accurate and lightweight countdown & stopwatch written in Typescript.",
+  "version": "1.0.0",
   "author": "Igor Kowalczyk",
+  "license": "MIT",
+  "repository": "IgorKowalczyk/countdown",
   "bugs": "https://github.com/igorkowalczyk/countdown/issues",
-  "repository": "https://github.com/igorkowalczyk/countdown",
   "homepage": "https://igorkowalczyk.github.io/countdown",
   "type": "module",
-  "license": "MIT",
   "exports": {
     "import": "./dist/mjs/index.js",
     "require": "./dist/cjs/index.cjs"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "rollup -c",
     "format:check": "prettier . --check",
@@ -41,6 +38,9 @@
     "tslib": "2.6.0",
     "typescript": "5.1.6"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "countdown",
     "stopwatch",
@@ -49,5 +49,6 @@
     "date",
     "javascript",
     "typescript"
-  ]
+  ],
+  "packageManager": "pnpm@8.6.9"
 }
