@@ -1,4 +1,4 @@
-<img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" alt="Countdown.js logo" src="https://github.com/IgorKowalczyk/is-browser/assets/49127376/bef245e0-6eaf-43bb-89df-09bd4ae80c463">
+<img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" alt="Countdown.js logo" src="https://user-images.githubusercontent.com/49127376/254998118-bef245e0-6eaf-43bb-89df-09bd4ae80c46.png">
 
 # Countdown.js
 
