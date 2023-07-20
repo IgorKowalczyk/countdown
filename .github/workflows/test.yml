@@ -1,4 +1,4 @@
-name: Format check
+name: Test package
 
 on:
  push:
@@ -7,14 +7,14 @@ on:
   branches: [master]
 
 jobs:
- format:
-  name: Build package
+ test:
+  name: Test package
   runs-on: ubuntu-latest
   strategy:
    fail-fast: false
    matrix:
     language: ["javascript"]
-    node: ["18.x"]
+    node: ["14x", "16x", "18x"]
   steps:
    - name: 🧱 Checkout repository
      uses: actions/checkout@v3
@@ -30,4 +30,4 @@ jobs:
    - name: 🚀 Install dependencies
      run: pnpm install
    - name: 🚀 Format check
-     run: "pnpm run format:check"
+     run: "pnpm run test"

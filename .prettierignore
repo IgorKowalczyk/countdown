@@ -1,7 +1,4 @@
-node_modules
-*min.css
-*min.js
-*md
-*webmanifest
 dist
-docs/
+package.json
+pnpm-lock.yaml
+coverage/
