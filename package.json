@@ -21,7 +21,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "1.5.3",
+    "@igorkowalczyk/eslint-config": "1.5.4",
     "@igorkowalczyk/prettier-config": "1.5.3",
     "@rollup/plugin-node-resolve": "15.1.0",
     "@rollup/plugin-typescript": "11.1.2",
