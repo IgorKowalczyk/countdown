@@ -20,7 +20,7 @@ yarn add @igorkowalczyk/countdown
 pnpm add @igorkowalczyk/countdown
 ```
 
-> **Note:**
+> [!NOTE]
 > This package can be used in both CommonJS and ESM environments.
 
 ## 📦 Usage
