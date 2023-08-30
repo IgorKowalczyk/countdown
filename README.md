@@ -1,14 +1,16 @@
-<img width="170" height="170" align="left" style="float: left; margin: 0 10px 0 0; border-radius: 50%;" alt="Countdown.js logo" src="https://user-images.githubusercontent.com/49127376/254998118-bef245e0-6eaf-43bb-89df-09bd4ae80c46.png">
+![Countdown.js](https://github.com/IgorKowalczyk/countdown/assets/49127376/06b07e58-b5c0-43aa-b193-c88d5d4a18b2)
 
-# Countdown.js
-
-⏱️ Fast, accurate and lightweight countdown & stopwatch written in Typescript.
-
-[![GitHub License](https://img.shields.io/github/license/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/countdown/blob/master/license.md)
-[![Version](https://img.shields.io/github/v/release/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square)](https://github.com/igorkowalczyk/countdown/releases)
-[![NPM Downloads](https://img.shields.io/npm/dt/@igorkowalczyk/countdown?style=flat-square&logo=npm&color=%2334D058)](https://npmjs.org/package/@igorkowalczyk/countdown)
-
----
+<div align="center">
+  <a aria-label="GitHub License" href="https://github.com/igorkowalczyk/countdown/blob/master/license.md">
+    <img src="https://img.shields.io/github/license/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square">
+  </a>
+  <a aria-label="Version" href="https://github.com/igorkowalczyk/countdown/releases">
+    <img src="https://img.shields.io/github/v/release/igorkowalczyk/countdown?color=%2334D058&logo=github&style=flat-square">
+  </a>
+  <a aria-label="NPM Downloads" href="https://npmjs.org/package/@igorkowalczyk/countdown">
+    <img src="https://img.shields.io/npm/dt/@igorkowalczyk/countdown?style=flat-square&logo=npm&color=%2334D058">
+  </a>
+</div>
 
 ## 📥 Installation
 
