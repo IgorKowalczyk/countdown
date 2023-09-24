@@ -1,4 +1,4 @@
-import Timer from "../dist/cjs/index";
+import Timer from "../src/index";
 
 describe("Timer off method", () => {
  beforeEach(() => {
