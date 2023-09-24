@@ -1,9 +1,10 @@
-import Timer from "../src/index";
+import Timer from "../dist/cjs/index";
 
 describe("Timer time property", () => {
  beforeEach(() => {
   jest.useFakeTimers();
  });
+
  test("should return the duration of the timer", () => {
   const timer = new Timer();
   timer.start(5000);

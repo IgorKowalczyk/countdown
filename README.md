@@ -14,8 +14,6 @@
 
 ## 📥 Installation
 
-> **Node.js 12x or newer is required!**
-
 ```
 npm install @igorkowalczyk/countdown
 yarn add @igorkowalczyk/countdown

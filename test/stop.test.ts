@@ -1,6 +1,10 @@
-import Timer from "../src/index";
+import Timer from "../dist/cjs/index";
 
 describe("Timer stop method", () => {
+ beforeEach(() => {
+  jest.useFakeTimers();
+ });
+
  test("should stop the timer", () => {
   const timer = new Timer();
   timer.start(5000);

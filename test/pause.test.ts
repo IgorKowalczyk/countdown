@@ -1,11 +1,16 @@
-import Timer from "../src/index";
+import Timer from "../dist/cjs/index";
 
 describe("Timer pause method", () => {
+ beforeEach(() => {
+  jest.useFakeTimers();
+ });
+
  test("should pause the timer", () => {
   const timer = new Timer();
   timer.start(5000); // Start the timer for 5 seconds
   timer.pause();
   expect(timer.status).toBe("paused");
+  timer.stop();
  });
 
  test("should not pause the timer if it is not running", () => {
@@ -19,5 +24,6 @@ describe("Timer pause method", () => {
 
   // Verify that the timer status remains unchanged
   expect(timer.status).toBe(initialStatus);
+  timer.stop();
  });
 });

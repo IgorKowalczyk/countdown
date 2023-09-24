@@ -1,6 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
-import nodePolyfills from "rollup-plugin-polyfill-node";
 import { uglify } from "rollup-plugin-uglify";
 
 // Common Rollup plugins for all bundles
@@ -27,14 +26,13 @@ export default [
    compact: true,
   },
  },
- // UMD bundle (with nodePolyfills)
+ // generate only types
  {
   input: "src/index.ts",
-  plugins: [...commonPlugins, nodePolyfills()],
+  plugins: commonPlugins,
   output: {
-   file: "dist/umd/index.js",
-   format: "umd",
-   name: "Timer",
+   file: "dist/types/index.d.ts",
+   format: "esm",
    compact: true,
   },
  },

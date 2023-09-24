@@ -1,9 +1,10 @@
-import Timer from "../src/index";
+import Timer from "../dist/cjs/index";
 
 describe("Timer tick method", () => {
  beforeEach(() => {
   jest.useFakeTimers();
  });
+
  test("should emit 'tick' event with the correct time", () => {
   const timer = new Timer();
   timer.start(5000);

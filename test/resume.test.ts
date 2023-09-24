@@ -1,6 +1,10 @@
-import Timer from "../src/index";
+import Timer from "../dist/cjs/index";
 
 describe("Timer resume method", () => {
+ beforeEach(() => {
+  jest.useFakeTimers();
+ });
+
  test("should resume the paused timer", () => {
   const timer = new Timer();
   timer.start(5000);
