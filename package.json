@@ -18,13 +18,13 @@
     "build": "rollup -c",
     "format:check": "prettier . --check",
     "format": "prettier . --write --ignore-unknown",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "1.5.6",
-    "@igorkowalczyk/prettier-config": "1.5.6",
+    "@igorkowalczyk/eslint-config": "2.0.2",
+    "@igorkowalczyk/prettier-config": "2.0.2",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-typescript": "11.1.5",
     "@types/jest": "29.5.6",

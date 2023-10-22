@@ -1,5 +1,5 @@
 module.exports = {
- extends: ["@igorkowalczyk/eslint-config", "plugin:@typescript-eslint/recommended"],
+ extends: ["@igorkowalczyk/eslint-config/legacy", "plugin:@typescript-eslint/recommended"],
  parser: "@typescript-eslint/parser",
  plugins: ["@typescript-eslint"],
  root: true,
