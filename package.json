@@ -20,7 +20,7 @@
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "2.2.0",
