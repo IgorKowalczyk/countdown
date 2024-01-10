@@ -26,14 +26,4 @@ export default [
    compact: true,
   },
  },
- // generate only types
- {
-  input: "src/index.ts",
-  plugins: commonPlugins,
-  output: {
-   file: "dist/types/index.d.ts",
-   format: "esm",
-   compact: true,
-  },
- },
 ];
