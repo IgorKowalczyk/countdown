@@ -10,8 +10,8 @@
   "noImplicitAny": true,
   "noImplicitReturns": true,
   "noUnusedLocals": true,
-  "moduleResolution": "Node",
+  "moduleResolution": "Node"
  },
  "exclude": ["node_modules/"],
- "include": ["./src/**/*"],
+ "include": ["./src/**/*"]
 }
