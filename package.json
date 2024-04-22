@@ -55,8 +55,5 @@
     "date",
     "javascript",
     "typescript"
-  ],
-  "engines": {
-    "pnpm": "8 || 9"
-  }
+  ]
 }
