@@ -42,7 +42,7 @@
     "rollup": "4.19.0",
     "rollup-plugin-uglify": "6.0.4",
     "ts-jest": "29.2.3",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   },
   "files": [
     "dist"
