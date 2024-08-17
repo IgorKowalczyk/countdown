@@ -55,5 +55,6 @@
     "date",
     "javascript",
     "typescript"
-  ]
+  ],
+  "packageManager": "pnpm@9.7.1"
 }
