@@ -32,9 +32,8 @@ class Timer {
   */
  public start(duration: number) {
   if (this._status !== "stopped") return;
-  if (!duration) {
-   throw new TypeError("You need to enter duration");
-  }
+  if (!duration) throw new TypeError("You need to enter duration");
+
   this._duration = duration;
   this._endTime = Date.now() + duration;
   this._changeStatus("running");
