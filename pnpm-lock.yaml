@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@igorkowalczyk/eslint-config':
         specifier: 2.2.0
-        version: 2.2.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0)(prettier@3.3.3)
+        version: 2.2.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0)(prettier@3.4.1)
       '@igorkowalczyk/prettier-config':
         specifier: 2.2.0
-        version: 2.2.0(prettier@3.3.3)
+        version: 2.2.0(prettier@3.4.1)
       '@rollup/plugin-node-resolve':
         specifier: 15.3.0
         version: 15.3.0(rollup@4.27.4)
@@ -39,8 +39,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.10.1)
       prettier:
-        specifier: 3.3.3
-        version: 3.3.3
+        specifier: 3.4.1
+        version: 3.4.1
       rollup:
         specifier: 4.27.4
         version: 4.27.4
@@ -1848,8 +1848,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.1:
+    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2498,12 +2498,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@igorkowalczyk/eslint-config@2.2.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0)(prettier@3.3.3)':
+  '@igorkowalczyk/eslint-config@2.2.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0)(prettier@3.4.1)':
     dependencies:
       '@eslint/js': 8.55.0
       eslint: 9.15.0
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0)
-      eslint-plugin-prettier: 5.0.1(eslint@9.15.0)(prettier@3.3.3)
+      eslint-plugin-prettier: 5.0.1(eslint@9.15.0)(prettier@3.4.1)
       globals: 13.23.0
     transitivePeerDependencies:
       - '@types/eslint'
@@ -2514,9 +2514,9 @@ snapshots:
       - prettier
       - supports-color
 
-  '@igorkowalczyk/prettier-config@2.2.0(prettier@3.3.3)':
+  '@igorkowalczyk/prettier-config@2.2.0(prettier@3.4.1)':
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.4.1
 
   '@istanbuljs/load-nyc-config@1.1.0':
     dependencies:
@@ -3398,10 +3398,10 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.0.1(eslint@9.15.0)(prettier@3.3.3):
+  eslint-plugin-prettier@5.0.1(eslint@9.15.0)(prettier@3.4.1):
     dependencies:
       eslint: 9.15.0
-      prettier: 3.3.3
+      prettier: 3.4.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.5
 
@@ -4385,7 +4385,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.3.3: {}
+  prettier@3.4.1: {}
 
   pretty-format@29.7.0:
     dependencies:
