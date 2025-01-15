@@ -23,14 +23,12 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "2.2.0",
-    "@igorkowalczyk/prettier-config": "2.2.0",
+    "@igorkowalczyk/eslint-config": "3.0.2",
+    "@igorkowalczyk/prettier-config": "3.0.2",
     "@rollup/plugin-node-resolve": "16.0.0",
     "@rollup/plugin-typescript": "12.1.2",
     "@types/jest": "29.5.14",
     "@types/node": "22.10.6",
-    "@typescript-eslint/eslint-plugin": "8.20.0",
-    "@typescript-eslint/parser": "8.20.0",
     "eslint": "9.18.0",
     "jest": "29.7.0",
     "prettier": "3.4.2",

@@ -74,7 +74,7 @@ class Timer {
   * @param {string} eventName - The name of the event to listen for.
   * @param {function} handler - The function to be called when the event is emitted.
   */
- public on(eventName: string, handler: (...args: any[]) => void) {
+ public on(eventName: string, handler: (...args: unknown[]) => void) {
   this._eventEmitter.on(eventName, handler);
  }
 
@@ -83,7 +83,7 @@ class Timer {
   * @param {string} eventName - The name of the event to stop listening for.
   * @param {function} handler - The function to be removed from the listeners of the event.
   */
- public off(eventName: string, handler: (...args: any[]) => void) {
+ public off(eventName: string, handler: (...args: unknown[]) => void) {
   this._eventEmitter.removeListener(eventName, handler);
  }
 
@@ -109,10 +109,10 @@ class Timer {
  /**
   * Emits a specified event with the provided data.
   * @param {string} event - The name of the event to be emitted.
-  * @param {any} data - The data to be sent with the event.
+  * @param {unknown} data - The data to be sent with the event.
   * @private
   */
- private _emit(event: string, data: any) {
+ private _emit(event: string, data: unknown) {
   this._eventEmitter.emit(event, data);
  }
 

@@ -1,4 +1,4 @@
-import Timer from "../src/index";
+import Timer from "@/src/index";
 
 describe("Timer start method", () => {
  beforeEach(() => {
@@ -20,9 +20,9 @@ describe("Timer start method", () => {
 
  test("should throw TypeError when duration is not provided", () => {
   const timer = new Timer();
-  /* @ts-ignore */
+
+  /* @ts-expect-error We are testing the error handling */
   expect(() => timer.start(undefined)).toThrow(TypeError);
-  /* @ts-ignore */
  });
 
  test("should not start the timer if it is already running", () => {
