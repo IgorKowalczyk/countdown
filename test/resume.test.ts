@@ -1,4 +1,4 @@
-import Timer from "@/src/index";
+import Timer from "../src/index";
 
 describe("Timer resume method", () => {
  beforeEach(() => {

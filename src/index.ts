@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+import { EventEmitter } from "node:events";
 
 /* Status type */
 type status = "running" | "paused" | "stopped";

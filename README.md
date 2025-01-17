@@ -24,6 +24,7 @@ pnpm add @igorkowalczyk/countdown
 
 ```js
 import Timer from "@igorkowalczyk/countdown";
+
 const timer = new Timer();
 
 timer.on("tick", (ms) => console.log("tick", ms));
