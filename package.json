@@ -50,5 +50,5 @@
     "javascript",
     "typescript"
   ],
-  "packageManager": "pnpm@10.2.0"
+  "packageManager": "pnpm@10.2.1"
 }
