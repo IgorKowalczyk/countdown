@@ -1,4 +1,3 @@
-/* eslint-disable node/no-missing-require */
 const Timer = require("@igorkowalczyk/countdown");
 const timer = new Timer();
 

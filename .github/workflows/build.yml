@@ -1,14 +1,10 @@
 name: Build
 
-on:
- push:
-  branches: [master]
- pull_request:
-  branches: [master]
+on: [push]
 
 jobs:
  build:
-  name: Build package
+  name: Build
   runs-on: ubuntu-latest
   strategy:
    fail-fast: false
@@ -27,7 +23,12 @@ jobs:
      with:
       node-version: ${{ matrix.node }}
       cache: "pnpm"
-   - name: 📥 Install dependencies
+   - name: 🚀 Install dependencies
      run: pnpm install
-   - name: 🚀 Build package
-     run: "pnpm run build"
+   - name: 🚀 Build
+     run: pnpm run build
+   - name: 📦 Archive production artifacts
+     uses: actions/upload-artifact@v4
+     with:
+      name: build
+      path: ./dist
