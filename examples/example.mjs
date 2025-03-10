@@ -1,3 +1,4 @@
+/* eslint-disable-next-line node/no-missing-require */
 import Timer from "@igorkowalczyk/countdown";
 const timer = new Timer();
 
