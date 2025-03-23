@@ -1,5 +1,4 @@
-/* eslint-disable-next-line node/no-missing-require */
-import Timer from "@igorkowalczyk/countdown";
+const Timer = require("@igorkowalczyk/countdown");
 const timer = new Timer();
 
 timer.on("tick", (ms) => console.log("tick", ms));
