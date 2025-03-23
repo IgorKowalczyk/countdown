@@ -25,7 +25,7 @@ export default [
  {
   name: "overrides",
   rules: {
-   "node/no-missing-requires": "off",
+   "node/no-missing-require": "off",
   },
  },
 ] satisfies Linter.Config[];
