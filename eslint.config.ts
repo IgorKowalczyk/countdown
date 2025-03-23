@@ -9,6 +9,7 @@ export default [
  ...eslintConfig.typescript,
  ...eslintConfig.prettier,
  {
+  name: "jest",
   files: ["test/**/*.mjs"],
   plugins: {
    jest: jestPlugin,
@@ -19,6 +20,12 @@ export default [
    "jest/no-identical-title": "error",
    "jest/prefer-to-have-length": "warn",
    "jest/valid-expect": "error",
+  },
+ },
+ {
+  name: "overrides",
+  rules: {
+   "node/no-missing-requires": "off",
   },
  },
 ] satisfies Linter.Config[];
