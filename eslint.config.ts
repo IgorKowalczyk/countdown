@@ -1,13 +1,13 @@
 import eslintConfig from "@igorkowalczyk/eslint-config";
-import { Linter } from "eslint";
 import jestPlugin from "eslint-plugin-jest";
+import { defineConfig } from "eslint/config";
 
-export default [
+export default defineConfig([
  // prettier
- ...eslintConfig.base,
- ...eslintConfig.node,
- ...eslintConfig.typescript,
- ...eslintConfig.prettier,
+ eslintConfig.base,
+ eslintConfig.node,
+ eslintConfig.typescript,
+ eslintConfig.prettier,
  {
   name: "jest",
   files: ["test/**/*.mjs"],
@@ -28,4 +28,4 @@ export default [
    "node/no-missing-require": "off",
   },
  },
-] satisfies Linter.Config[];
+]);
