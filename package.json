@@ -35,7 +35,7 @@
     "@types/node": "22.15.3",
     "@vitest/eslint-plugin": "1.1.44",
     "automd": "0.4.0",
-    "eslint": "9.25.1",
+    "eslint": "9.26.0",
     "prettier": "3.5.3",
     "rimraf": "6.0.1",
     "rollup": "4.40.1",
