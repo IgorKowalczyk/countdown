@@ -1,31 +1,27 @@
+import { describe, test, expect, beforeEach, vi } from "vitest";
 import Timer from "../src/index";
 
 describe("Timer on method", () => {
  beforeEach(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
  });
 
  test("should register the event handler", () => {
   const timer = new Timer();
   timer.start(5000);
 
-  // Mock event handler
-  const mockTickHandler = jest.fn();
+  const mockTickHandler = vi.fn();
 
-  // Register the event handler
   timer.on("tick", mockTickHandler);
 
-  // Advance the timer manually to trigger events
-  jest.advanceTimersByTime(1000);
-  jest.advanceTimersByTime(5000);
+  vi.advanceTimersByTime(1000);
+  vi.advanceTimersByTime(5000);
 
-  // Verify that the tick event handler was called multiple times (every second)
   expect(mockTickHandler).toHaveBeenCalledTimes(5);
 
-  // The done event should not be emitted since we only registered the tick event
-  const mockDoneHandler = jest.fn();
+  const mockDoneHandler = vi.fn();
   timer.on("done", mockDoneHandler);
-  jest.advanceTimersByTime(5000); // Advance to the end of the timer
+  vi.advanceTimersByTime(5000); // Advance to the end of the timer
   expect(mockDoneHandler).toHaveBeenCalledTimes(0);
  });
 });

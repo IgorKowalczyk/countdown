@@ -1,8 +1,9 @@
+import { describe, test, expect, beforeEach, vi } from "vitest";
 import Timer from "../src/index";
 
 describe("Timer pause method", () => {
  beforeEach(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
  });
 
  test("should pause the timer", () => {
@@ -19,10 +20,8 @@ describe("Timer pause method", () => {
   // Save the current timer status
   const initialStatus = timer.status;
 
-  // Attempt to pause the timer
   timer.pause();
 
-  // Verify that the timer status remains unchanged
   expect(timer.status).toBe(initialStatus);
   timer.stop();
  });
