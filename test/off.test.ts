@@ -1,44 +1,32 @@
+import { describe, it, expect, vi } from "vitest";
 import Timer from "../src/index";
 
 describe("Timer off method", () => {
- beforeEach(() => {
-  jest.useFakeTimers();
- });
-
- test("should remove the event handler", () => {
+ it("should remove the event handler", () => {
+  vi.useFakeTimers();
   const timer = new Timer();
   timer.start(5000);
 
-  // Mock event handler
-  const mockTickHandler = jest.fn();
-  const mockDoneHandler = jest.fn();
+  const mockTickHandler = vi.fn();
+  const mockDoneHandler = vi.fn();
 
-  // Register event handlers
   timer.on("tick", mockTickHandler);
   timer.on("done", mockDoneHandler);
 
-  // Advance the timer manually to trigger events
-  jest.advanceTimersByTime(1000);
-  jest.advanceTimersByTime(5000);
+  vi.advanceTimersByTime(1000);
+  vi.advanceTimersByTime(5000);
 
-  // Verify that both event handlers were called
   expect(mockTickHandler).toHaveBeenCalledTimes(5);
   expect(mockDoneHandler).toHaveBeenCalledTimes(1);
 
-  // Remove the tick event handler
   timer.off("tick", mockTickHandler);
-
-  // Remove the done event handler
   timer.off("done", mockDoneHandler);
 
-  // Advance the timer again to trigger events
-  jest.advanceTimersByTime(5000);
+  vi.advanceTimersByTime(5000);
 
-  // Verify that none of the event handlers are called anymore
   expect(mockTickHandler).toHaveBeenCalledTimes(5);
   expect(mockDoneHandler).toHaveBeenCalledTimes(1);
 
-  // Clean up the timer
   timer.stop();
  });
 });

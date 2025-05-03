@@ -1,8 +1,9 @@
+import { describe, test, expect, beforeEach, vi } from "vitest";
 import Timer from "../src/index";
 
 describe("Timer stop method", () => {
  beforeEach(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
  });
 
  test("should stop the timer", () => {

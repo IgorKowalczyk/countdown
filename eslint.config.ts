@@ -1,5 +1,5 @@
 import eslintConfig from "@igorkowalczyk/eslint-config";
-import jestPlugin from "eslint-plugin-jest";
+import vitest from "@vitest/eslint-plugin";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
@@ -9,17 +9,12 @@ export default defineConfig([
  eslintConfig.typescript,
  eslintConfig.prettier,
  {
-  name: "jest",
-  files: ["test/**/*.mjs"],
+  files: ["tests/**"],
   plugins: {
-   jest: jestPlugin,
+   vitest,
   },
   rules: {
-   "jest/no-disabled-tests": "warn",
-   "jest/no-focused-tests": "error",
-   "jest/no-identical-title": "error",
-   "jest/prefer-to-have-length": "warn",
-   "jest/valid-expect": "error",
+   ...vitest.configs.recommended.rules,
   },
  },
  {
