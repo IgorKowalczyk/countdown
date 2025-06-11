@@ -40,7 +40,7 @@
     "rimraf": "6.0.1",
     "rollup": "4.43.0",
     "typescript": "5.8.3",
-    "vitest": "3.2.2"
+    "vitest": "3.2.3"
   },
   "files": [
     "README.md",
