@@ -12,8 +12,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(@typescript-eslint/utils@8.35.0(eslint@9.35.0(jiti@2.4.2))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.4.2))(prettier@3.6.2)(ts-api-utils@2.1.0(typescript@5.9.2))(typescript@5.9.2)
       '@igorkowalczyk/prettier-config':
-        specifier: 3.1.0
-        version: 3.1.0(prettier@3.6.2)
+        specifier: 3.2.1
+        version: 3.2.1(prettier@3.6.2)
       '@rollup/plugin-node-resolve':
         specifier: 16.0.1
         version: 16.0.1(rollup@4.52.4)
@@ -335,8 +335,8 @@ packages:
     peerDependencies:
       eslint: ^9
 
-  '@igorkowalczyk/prettier-config@3.1.0':
-    resolution: {integrity: sha512-nhD66AFONmEGzZK++CAzRchMF/TXIx26+DnkfbbQSSHZU/BfKJV47pkqYVRs1youwC58U7s+t55beJvvU46UEA==}
+  '@igorkowalczyk/prettier-config@3.2.1':
+    resolution: {integrity: sha512-9hntLRd2pKCVgTAI3VoTWAJk9lXWqZsCev0aSqCB+fkjK9ciPx+2c74XcsnHSZ7nMbln7qJpPr5/Mvg5mGozHg==}
     peerDependencies:
       prettier: ^3
 
@@ -1471,6 +1471,7 @@ packages:
   glob@11.0.3:
     resolution: {integrity: sha512-2Nim7dha1KVkaiF4q6Dj+ngPPMdfvLJEOpZk/jKiUAkqKebpGAWQXAq9z1xu9HKu5lWfqw/FASuccEjyznjPaA==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@14.0.0:
@@ -2601,7 +2602,7 @@ snapshots:
       - ts-api-utils
       - typescript
 
-  '@igorkowalczyk/prettier-config@3.1.0(prettier@3.6.2)':
+  '@igorkowalczyk/prettier-config@3.2.1(prettier@3.6.2)':
     dependencies:
       prettier: 3.6.2
 
