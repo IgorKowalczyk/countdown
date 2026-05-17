@@ -12,6 +12,11 @@
   </a>
 </div>
 
+# 🚫 Repository Deprecated
+
+> [!CAUTION]
+> This repository is deprecated and no longer maintained. No further updates, bug fixes, or support will be provided.
+
 ## 📥 Installation
 
 ```
